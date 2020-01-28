@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FDFDA76823E0AF530060C1C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */; };
+		FDFDA76A23E0AF530060C1C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76923E0AF530060C1C4 /* SceneDelegate.swift */; };
+		FDFDA76C23E0AF530060C1C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76B23E0AF530060C1C4 /* ContentView.swift */; };
+		FDFDA76E23E0AF560060C1C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFDA76D23E0AF560060C1C4 /* Assets.xcassets */; };
+		FDFDA77123E0AF560060C1C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFDA77023E0AF560060C1C4 /* Preview Assets.xcassets */; };
+		FDFDA77423E0AF560060C1C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDFDA77223E0AF560060C1C4 /* LaunchScreen.storyboard */; };
+		FDFDA77F23E0AF560060C1C4 /* LazyPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA77E23E0AF560060C1C4 /* LazyPlannerTests.swift */; };
+		FDFDA78A23E0AF560060C1C4 /* LazyPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA78923E0AF560060C1C4 /* LazyPlannerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDFDA77B23E0AF560060C1C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDFDA75C23E0AF530060C1C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDFDA76323E0AF530060C1C4;
+			remoteInfo = LazyPlanner;
+		};
+		FDFDA78623E0AF560060C1C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDFDA75C23E0AF530060C1C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDFDA76323E0AF530060C1C4;
+			remoteInfo = LazyPlanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FDFDA76423E0AF530060C1C4 /* LazyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDFDA76923E0AF530060C1C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FDFDA76B23E0AF530060C1C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FDFDA76D23E0AF560060C1C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDFDA77023E0AF560060C1C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FDFDA77323E0AF560060C1C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDFDA77523E0AF560060C1C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDFDA77A23E0AF560060C1C4 /* LazyPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDFDA77E23E0AF560060C1C4 /* LazyPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyPlannerTests.swift; sourceTree = "<group>"; };
+		FDFDA78023E0AF560060C1C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDFDA78523E0AF560060C1C4 /* LazyPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDFDA78923E0AF560060C1C4 /* LazyPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyPlannerUITests.swift; sourceTree = "<group>"; };
+		FDFDA78B23E0AF560060C1C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDFDA76123E0AF530060C1C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDFDA77723E0AF560060C1C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDFDA78223E0AF560060C1C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FDFDA75B23E0AF530060C1C4 = {
+			isa = PBXGroup;
+			children = (
+				FDFDA76623E0AF530060C1C4 /* LazyPlanner */,
+				FDFDA77D23E0AF560060C1C4 /* LazyPlannerTests */,
+				FDFDA78823E0AF560060C1C4 /* LazyPlannerUITests */,
+				FDFDA76523E0AF530060C1C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FDFDA76523E0AF530060C1C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDFDA76423E0AF530060C1C4 /* LazyPlanner.app */,
+				FDFDA77A23E0AF560060C1C4 /* LazyPlannerTests.xctest */,
+				FDFDA78523E0AF560060C1C4 /* LazyPlannerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDFDA76623E0AF530060C1C4 /* LazyPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */,
+				FDFDA76923E0AF530060C1C4 /* SceneDelegate.swift */,
+				FDFDA76B23E0AF530060C1C4 /* ContentView.swift */,
+				FDFDA76D23E0AF560060C1C4 /* Assets.xcassets */,
+				FDFDA77223E0AF560060C1C4 /* LaunchScreen.storyboard */,
+				FDFDA77523E0AF560060C1C4 /* Info.plist */,
+				FDFDA76F23E0AF560060C1C4 /* Preview Content */,
+			);
+			path = LazyPlanner;
+			sourceTree = "<group>";
+		};
+		FDFDA76F23E0AF560060C1C4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FDFDA77023E0AF560060C1C4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FDFDA77D23E0AF560060C1C4 /* LazyPlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDFDA77E23E0AF560060C1C4 /* LazyPlannerTests.swift */,
+				FDFDA78023E0AF560060C1C4 /* Info.plist */,
+			);
+			path = LazyPlannerTests;
+			sourceTree = "<group>";
+		};
+		FDFDA78823E0AF560060C1C4 /* LazyPlannerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FDFDA78923E0AF560060C1C4 /* LazyPlannerUITests.swift */,
+				FDFDA78B23E0AF560060C1C4 /* Info.plist */,
+			);
+			path = LazyPlannerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDFDA76323E0AF530060C1C4 /* LazyPlanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDFDA78E23E0AF560060C1C4 /* Build configuration list for PBXNativeTarget "LazyPlanner" */;
+			buildPhases = (
+				FDFDA76023E0AF530060C1C4 /* Sources */,
+				FDFDA76123E0AF530060C1C4 /* Frameworks */,
+				FDFDA76223E0AF530060C1C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LazyPlanner;
+			productName = LazyPlanner;
+			productReference = FDFDA76423E0AF530060C1C4 /* LazyPlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FDFDA77923E0AF560060C1C4 /* LazyPlannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDFDA79123E0AF560060C1C4 /* Build configuration list for PBXNativeTarget "LazyPlannerTests" */;
+			buildPhases = (
+				FDFDA77623E0AF560060C1C4 /* Sources */,
+				FDFDA77723E0AF560060C1C4 /* Frameworks */,
+				FDFDA77823E0AF560060C1C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDFDA77C23E0AF560060C1C4 /* PBXTargetDependency */,
+			);
+			name = LazyPlannerTests;
+			productName = LazyPlannerTests;
+			productReference = FDFDA77A23E0AF560060C1C4 /* LazyPlannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FDFDA78423E0AF560060C1C4 /* LazyPlannerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDFDA79423E0AF560060C1C4 /* Build configuration list for PBXNativeTarget "LazyPlannerUITests" */;
+			buildPhases = (
+				FDFDA78123E0AF560060C1C4 /* Sources */,
+				FDFDA78223E0AF560060C1C4 /* Frameworks */,
+				FDFDA78323E0AF560060C1C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDFDA78723E0AF560060C1C4 /* PBXTargetDependency */,
+			);
+			name = LazyPlannerUITests;
+			productName = LazyPlannerUITests;
+			productReference = FDFDA78523E0AF560060C1C4 /* LazyPlannerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDFDA75C23E0AF530060C1C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Stephanie Le, Ling Ma";
+				TargetAttributes = {
+					FDFDA76323E0AF530060C1C4 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					FDFDA77923E0AF560060C1C4 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = FDFDA76323E0AF530060C1C4;
+					};
+					FDFDA78423E0AF560060C1C4 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = FDFDA76323E0AF530060C1C4;
+					};
+				};
+			};
+			buildConfigurationList = FDFDA75F23E0AF530060C1C4 /* Build configuration list for PBXProject "LazyPlanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDFDA75B23E0AF530060C1C4;
+			productRefGroup = FDFDA76523E0AF530060C1C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDFDA76323E0AF530060C1C4 /* LazyPlanner */,
+				FDFDA77923E0AF560060C1C4 /* LazyPlannerTests */,
+				FDFDA78423E0AF560060C1C4 /* LazyPlannerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDFDA76223E0AF530060C1C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFDA77423E0AF560060C1C4 /* LaunchScreen.storyboard in Resources */,
+				FDFDA77123E0AF560060C1C4 /* Preview Assets.xcassets in Resources */,
+				FDFDA76E23E0AF560060C1C4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDFDA77823E0AF560060C1C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDFDA78323E0AF560060C1C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDFDA76023E0AF530060C1C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFDA76823E0AF530060C1C4 /* AppDelegate.swift in Sources */,
+				FDFDA76A23E0AF530060C1C4 /* SceneDelegate.swift in Sources */,
+				FDFDA76C23E0AF530060C1C4 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDFDA77623E0AF560060C1C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFDA77F23E0AF560060C1C4 /* LazyPlannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDFDA78123E0AF560060C1C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFDA78A23E0AF560060C1C4 /* LazyPlannerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDFDA77C23E0AF560060C1C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDFDA76323E0AF530060C1C4 /* LazyPlanner */;
+			targetProxy = FDFDA77B23E0AF560060C1C4 /* PBXContainerItemProxy */;
+		};
+		FDFDA78723E0AF560060C1C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDFDA76323E0AF530060C1C4 /* LazyPlanner */;
+			targetProxy = FDFDA78623E0AF560060C1C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FDFDA77223E0AF560060C1C4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDFDA77323E0AF560060C1C4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FDFDA78C23E0AF560060C1C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FDFDA78D23E0AF560060C1C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDFDA78F23E0AF560060C1C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LazyPlanner/Preview Content\"";
+				DEVELOPMENT_TEAM = C3H7BY5897;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LazyPlanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sample1.LazyPlanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDFDA79023E0AF560060C1C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LazyPlanner/Preview Content\"";
+				DEVELOPMENT_TEAM = C3H7BY5897;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LazyPlanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sample1.LazyPlanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FDFDA79223E0AF560060C1C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3H7BY5897;
+				INFOPLIST_FILE = LazyPlannerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sample1.LazyPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyPlanner.app/LazyPlanner";
+			};
+			name = Debug;
+		};
+		FDFDA79323E0AF560060C1C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3H7BY5897;
+				INFOPLIST_FILE = LazyPlannerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sample1.LazyPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyPlanner.app/LazyPlanner";
+			};
+			name = Release;
+		};
+		FDFDA79523E0AF560060C1C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3H7BY5897;
+				INFOPLIST_FILE = LazyPlannerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sample1.LazyPlannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LazyPlanner;
+			};
+			name = Debug;
+		};
+		FDFDA79623E0AF560060C1C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3H7BY5897;
+				INFOPLIST_FILE = LazyPlannerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sample1.LazyPlannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LazyPlanner;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDFDA75F23E0AF530060C1C4 /* Build configuration list for PBXProject "LazyPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDFDA78C23E0AF560060C1C4 /* Debug */,
+				FDFDA78D23E0AF560060C1C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDFDA78E23E0AF560060C1C4 /* Build configuration list for PBXNativeTarget "LazyPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDFDA78F23E0AF560060C1C4 /* Debug */,
+				FDFDA79023E0AF560060C1C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDFDA79123E0AF560060C1C4 /* Build configuration list for PBXNativeTarget "LazyPlannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDFDA79223E0AF560060C1C4 /* Debug */,
+				FDFDA79323E0AF560060C1C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDFDA79423E0AF560060C1C4 /* Build configuration list for PBXNativeTarget "LazyPlannerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDFDA79523E0AF560060C1C4 /* Debug */,
+				FDFDA79623E0AF560060C1C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDFDA75C23E0AF530060C1C4 /* Project object */;
+}
