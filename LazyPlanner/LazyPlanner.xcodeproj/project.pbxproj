@@ -169,8 +169,8 @@
 		FDFDA79923E728980060C1C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FDFDA7A323E7CE580060C1C4 /* seafood-risotto.jpg */,
 				FDFDA79B23E72AE20060C1C4 /* RecipeData.json */,
+				FDFDA7A323E7CE580060C1C4 /* seafood-risotto.jpg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

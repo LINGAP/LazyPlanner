@@ -9,16 +9,21 @@
 import SwiftUI
 
 struct RecipeThumbnail: View {
-    //recipe:Recipe
+    var recipe:Recipe
     var body: some View {
-        Text("hello")
+        Image("seafood-risotto")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .mask(Circle().padding())
+
+            
         
     }
 }
 
 struct RecipeThumbnail_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeThumbnail()//recipe:RecipeData[0], evoked error when try to load the json
+        RecipeThumbnail(recipe:recipeData[0])//recipe:RecipeData[0], evoked error when try to load the json
         
     }
 }

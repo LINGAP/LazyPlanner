@@ -35,7 +35,15 @@ struct Nutrients: Hashable, Codable {
 
 struct Price: Hashable, Codable {
     var totalPrice: Double
-    var pricetag: PriceTag
+    var priceTag: PriceTag {
+        if totalPrice < 5 {
+            return .low
+        } else if totalPrice < 10 {
+            return .medium
+        } else {
+            return .high
+        }
+    }
     
     enum PriceTag: String, CaseIterable, Codable, Hashable {
         case low = "$"
