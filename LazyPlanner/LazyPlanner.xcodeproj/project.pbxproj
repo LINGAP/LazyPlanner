@@ -15,6 +15,11 @@
 		FDFDA77423E0AF560060C1C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDFDA77223E0AF560060C1C4 /* LaunchScreen.storyboard */; };
 		FDFDA77F23E0AF560060C1C4 /* LazyPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA77E23E0AF560060C1C4 /* LazyPlannerTests.swift */; };
 		FDFDA78A23E0AF560060C1C4 /* LazyPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA78923E0AF560060C1C4 /* LazyPlannerUITests.swift */; };
+		FDFDA79C23E72AE20060C1C4 /* RecipeData.json in Resources */ = {isa = PBXBuildFile; fileRef = FDFDA79B23E72AE20060C1C4 /* RecipeData.json */; };
+		FDFDA79E23E735300060C1C4 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA79D23E735300060C1C4 /* Recipe.swift */; };
+		FDFDA7A223E7CAEB0060C1C4 /* RecipeThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA7A123E7CAEB0060C1C4 /* RecipeThumbnail.swift */; };
+		FDFDA7A423E7CE580060C1C4 /* seafood-risotto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDFDA7A323E7CE580060C1C4 /* seafood-risotto.jpg */; };
+		FDFDA7A623E7D2150060C1C4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA7A523E7D2150060C1C4 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		FDFDA78523E0AF560060C1C4 /* LazyPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFDA78923E0AF560060C1C4 /* LazyPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyPlannerUITests.swift; sourceTree = "<group>"; };
 		FDFDA78B23E0AF560060C1C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDFDA79B23E72AE20060C1C4 /* RecipeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RecipeData.json; sourceTree = "<group>"; };
+		FDFDA79D23E735300060C1C4 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		FDFDA7A123E7CAEB0060C1C4 /* RecipeThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeThumbnail.swift; sourceTree = "<group>"; };
+		FDFDA7A323E7CE580060C1C4 /* seafood-risotto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "seafood-risotto.jpg"; sourceTree = "<group>"; };
+		FDFDA7A523E7D2150060C1C4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +109,15 @@
 		FDFDA76623E0AF530060C1C4 /* LazyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				FDFDA79823E728700060C1C4 /* Supporting Views */,
+				FDFDA79723E7284E0060C1C4 /* Models */,
 				FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */,
 				FDFDA76923E0AF530060C1C4 /* SceneDelegate.swift */,
 				FDFDA76B23E0AF530060C1C4 /* ContentView.swift */,
 				FDFDA76D23E0AF560060C1C4 /* Assets.xcassets */,
 				FDFDA77223E0AF560060C1C4 /* LaunchScreen.storyboard */,
 				FDFDA77523E0AF560060C1C4 /* Info.plist */,
+				FDFDA79923E728980060C1C4 /* Resources */,
 				FDFDA76F23E0AF560060C1C4 /* Preview Content */,
 			);
 			path = LazyPlanner;
@@ -134,6 +147,32 @@
 				FDFDA78B23E0AF560060C1C4 /* Info.plist */,
 			);
 			path = LazyPlannerUITests;
+			sourceTree = "<group>";
+		};
+		FDFDA79723E7284E0060C1C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDFDA79D23E735300060C1C4 /* Recipe.swift */,
+				FDFDA7A523E7D2150060C1C4 /* Data.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FDFDA79823E728700060C1C4 /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDFDA7A123E7CAEB0060C1C4 /* RecipeThumbnail.swift */,
+			);
+			path = "Supporting Views";
+			sourceTree = "<group>";
+		};
+		FDFDA79923E728980060C1C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FDFDA7A323E7CE580060C1C4 /* seafood-risotto.jpg */,
+				FDFDA79B23E72AE20060C1C4 /* RecipeData.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +280,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDFDA77423E0AF560060C1C4 /* LaunchScreen.storyboard in Resources */,
+				FDFDA79C23E72AE20060C1C4 /* RecipeData.json in Resources */,
+				FDFDA7A423E7CE580060C1C4 /* seafood-risotto.jpg in Resources */,
 				FDFDA77123E0AF560060C1C4 /* Preview Assets.xcassets in Resources */,
 				FDFDA76E23E0AF560060C1C4 /* Assets.xcassets in Resources */,
 			);
@@ -267,9 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDFDA7A223E7CAEB0060C1C4 /* RecipeThumbnail.swift in Sources */,
+				FDFDA7A623E7D2150060C1C4 /* Data.swift in Sources */,
 				FDFDA76823E0AF530060C1C4 /* AppDelegate.swift in Sources */,
 				FDFDA76A23E0AF530060C1C4 /* SceneDelegate.swift in Sources */,
 				FDFDA76C23E0AF530060C1C4 /* ContentView.swift in Sources */,
+				FDFDA79E23E735300060C1C4 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
