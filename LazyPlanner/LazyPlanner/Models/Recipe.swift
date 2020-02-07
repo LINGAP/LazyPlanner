@@ -11,11 +11,11 @@ import CoreLocation //I'm not sure what this does, copide from tutorial
 struct Recipe: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
-    var ingredients:[String] //supposed to be a list, corresponds to json
-    var directions:String
+    var ingredients:[String]
+    var directions:[String]
     
-    fileprivate var nutrients: Nutrients //set to be fileprivate because I wonder if some processing should be applied before use this part
-    fileprivate var price:Price
+    var nutrients: Nutrients
+    var price:Price
     var imageName:String
 
 }
@@ -27,10 +27,25 @@ extension Recipe {
 }
 
 struct Nutrients: Hashable, Codable {
+    var color: ScoreColor{
+        if(calories < 500){
+            return .A
+        }else if(calories < 650){
+            return .B
+        }else{
+            return .C
+        }
+    }
     var calories: Int
     var protein: Double
     var fat: Double
     var carbohydrates: Double
+    
+    enum ScoreColor: String, CaseIterable, Codable, Hashable {
+        case A = "green"
+        case B = "yellow"
+        case C = "pink"
+    }
 }
 
 struct Price: Hashable, Codable {

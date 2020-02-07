@@ -11,19 +11,28 @@ import SwiftUI
 struct RecipeThumbnail: View {
     var recipe:Recipe
     var body: some View {
-        Image("seafood-risotto")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .mask(Circle().padding())
-
+        VStack{
+            Image(recipe.imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width:200,height: 200)
+                .overlay(Circle()
+                    .fill(Color.green)
+                    .frame(width:30,height: 30)
+                    .position(.init(x: 30, y: 170))
+                    )
+                
+            Text(recipe.name)
+                .font(.caption)
             
+        }
         
     }
 }
 
 struct RecipeThumbnail_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeThumbnail(recipe:recipeData[0])//recipe:RecipeData[0], evoked error when try to load the json
+        RecipeThumbnail(recipe:recipeData[0])
         
     }
 }
