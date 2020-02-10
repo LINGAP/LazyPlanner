@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DA23EDEDF100A7B565 /* RecipeList.swift */; };
+		FDA939DD23F11E1300A7B565 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */; };
+		FDA939DF23F1218100A7B565 /* rice-cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939DE23F1218000A7B565 /* rice-cake.jpg */; };
 		FDFDA76823E0AF530060C1C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */; };
 		FDFDA76A23E0AF530060C1C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76923E0AF530060C1C4 /* SceneDelegate.swift */; };
 		FDFDA76C23E0AF530060C1C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76B23E0AF530060C1C4 /* ContentView.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FDA939DA23EDEDF100A7B565 /* RecipeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
+		FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
+		FDA939DE23F1218000A7B565 /* rice-cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rice-cake.jpg"; sourceTree = "<group>"; };
 		FDFDA76423E0AF530060C1C4 /* LazyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDFDA76923E0AF530060C1C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,7 +167,9 @@
 		FDFDA79823E728700060C1C4 /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
+				FDA939DA23EDEDF100A7B565 /* RecipeList.swift */,
 				FDFDA7A123E7CAEB0060C1C4 /* RecipeThumbnail.swift */,
+				FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -169,8 +177,9 @@
 		FDFDA79923E728980060C1C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FDFDA79B23E72AE20060C1C4 /* RecipeData.json */,
 				FDFDA7A323E7CE580060C1C4 /* seafood-risotto.jpg */,
+				FDA939DE23F1218000A7B565 /* rice-cake.jpg */,
+				FDFDA79B23E72AE20060C1C4 /* RecipeData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -281,6 +290,7 @@
 			files = (
 				FDFDA77423E0AF560060C1C4 /* LaunchScreen.storyboard in Resources */,
 				FDFDA79C23E72AE20060C1C4 /* RecipeData.json in Resources */,
+				FDA939DF23F1218100A7B565 /* rice-cake.jpg in Resources */,
 				FDFDA7A423E7CE580060C1C4 /* seafood-risotto.jpg in Resources */,
 				FDFDA77123E0AF560060C1C4 /* Preview Assets.xcassets in Resources */,
 				FDFDA76E23E0AF560060C1C4 /* Assets.xcassets in Resources */,
@@ -308,12 +318,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA939DD23F11E1300A7B565 /* RecipeDetail.swift in Sources */,
 				FDFDA7A223E7CAEB0060C1C4 /* RecipeThumbnail.swift in Sources */,
 				FDFDA7A623E7D2150060C1C4 /* Data.swift in Sources */,
 				FDFDA76823E0AF530060C1C4 /* AppDelegate.swift in Sources */,
 				FDFDA76A23E0AF530060C1C4 /* SceneDelegate.swift in Sources */,
 				FDFDA76C23E0AF530060C1C4 /* ContentView.swift in Sources */,
 				FDFDA79E23E735300060C1C4 /* Recipe.swift in Sources */,
+				FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

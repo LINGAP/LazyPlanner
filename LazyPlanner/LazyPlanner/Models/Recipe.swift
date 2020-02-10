@@ -26,6 +26,8 @@ extension Recipe {
 //    }
 }
 
+
+
 struct Nutrients: Hashable, Codable {
     var color: ScoreColor{
         if(calories < 500){
@@ -60,7 +62,7 @@ struct Price: Hashable, Codable {
         }
     }
     
-    enum PriceTag: String, CaseIterable, Codable, Hashable {
+    enum PriceTag: String, CaseIterable, Codable, Hashable{
         case low = "$"
         case medium = "$$"
         case high = "$$$"
