@@ -20,6 +20,7 @@ struct RecipeThumbnail: View {
            
             Image(recipe.imageName)
                 .resizable()
+                .frame(width: 200, height: 150)
                 .aspectRatio(contentMode: .fill)
                 .frame(width:width,height: height)
                 .overlay(Circle()

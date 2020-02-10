@@ -11,10 +11,9 @@ import SwiftUI
 struct RecipeScroll: View {
     var body: some View {
         ScrollView(.horizontal) {
-            HStack(spacing: 30) {
+            HStack{
                 ForEach(recipeData) { recipe in
                     RecipeThumbnail(recipe: recipe)
-                    Spacer()
             }
         }
     }
