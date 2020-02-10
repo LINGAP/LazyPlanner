@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1861BAF723F19EEC0015EB7F /* RecipeScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BAF623F19EEC0015EB7F /* RecipeScroll.swift */; };
+		1861BAF923F1A3AA0015EB7F /* Spaghetti-Bolognese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1861BAF823F1A3AA0015EB7F /* Spaghetti-Bolognese.jpg */; };
 		FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DA23EDEDF100A7B565 /* RecipeList.swift */; };
 		FDA939DD23F11E1300A7B565 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */; };
 		FDA939DF23F1218100A7B565 /* rice-cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939DE23F1218000A7B565 /* rice-cake.jpg */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		1861BAF623F19EEC0015EB7F /* RecipeScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeScroll.swift; sourceTree = "<group>"; };
+		1861BAF823F1A3AA0015EB7F /* Spaghetti-Bolognese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Spaghetti-Bolognese.jpg"; path = "../../../../../Spaghetti-Bolognese.jpg"; sourceTree = "<group>"; };
 		FDA939DA23EDEDF100A7B565 /* RecipeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		FDA939DE23F1218000A7B565 /* rice-cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rice-cake.jpg"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		FDFDA79923E728980060C1C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1861BAF823F1A3AA0015EB7F /* Spaghetti-Bolognese.jpg */,
 				FDFDA7A323E7CE580060C1C4 /* seafood-risotto.jpg */,
 				FDA939DE23F1218000A7B565 /* rice-cake.jpg */,
 				FDFDA79B23E72AE20060C1C4 /* RecipeData.json */,
@@ -297,6 +300,7 @@
 				FDFDA7A423E7CE580060C1C4 /* seafood-risotto.jpg in Resources */,
 				FDFDA77123E0AF560060C1C4 /* Preview Assets.xcassets in Resources */,
 				FDFDA76E23E0AF560060C1C4 /* Assets.xcassets in Resources */,
+				1861BAF923F1A3AA0015EB7F /* Spaghetti-Bolognese.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

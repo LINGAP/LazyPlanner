@@ -34,5 +34,22 @@
            },
            "imageName":"rice-cake"
 
-       }
+       },
+       {   "id":3,
+              "name":"Spaghetti Bolognese",
+              "ingredients":["400g Spaghetti","2 tbsp tomato paste","500g beef mince"],
+       
+              "directions":["Heat oil in a large pot or deep skillet over medium high heat. Add onion and garlic, cook for 3 minutes or until light golden and softened. Turn heat up to high and add beef. Cook, breaking it up as your go, until browned. Add red wine. Bring to simmer and cook for 1 minute, scraping the bottom of the pot, until the alcohol smell is gone.Add remaining ingredients except salt and pepper. Stir, bring to a simmer then turn down to medium so it bubbles gently. Cook for 20 - 30 minutes (no lid), adding water if the sauce gets too thick for your taste. Stir occasionally. (See note 5 for slow cooking option). Adjust salt and pepper to taste right at the end. Serve over spaghetti - though if you have the time, I recommend tossing the sauce and pasta per steps below."],
+              "nutrients":{
+                  "calories":3044,
+                  "protein":28.00,
+                  "fat":150.3,
+                  "carbohydrates":262.88
+              },
+              "price":{
+                  "totalPrice":5.51
+              },
+              "imageName":"Spaghetti-Bolognese"
+
+          }
 ]
