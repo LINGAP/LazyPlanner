@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1861BAF723F19EEC0015EB7F /* RecipeScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BAF623F19EEC0015EB7F /* RecipeScroll.swift */; };
 		FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DA23EDEDF100A7B565 /* RecipeList.swift */; };
 		FDA939DD23F11E1300A7B565 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */; };
 		FDA939DF23F1218100A7B565 /* rice-cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939DE23F1218000A7B565 /* rice-cake.jpg */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1861BAF623F19EEC0015EB7F /* RecipeScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeScroll.swift; sourceTree = "<group>"; };
 		FDA939DA23EDEDF100A7B565 /* RecipeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		FDA939DE23F1218000A7B565 /* rice-cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rice-cake.jpg"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				FDA939DA23EDEDF100A7B565 /* RecipeList.swift */,
+				1861BAF623F19EEC0015EB7F /* RecipeScroll.swift */,
 				FDFDA7A123E7CAEB0060C1C4 /* RecipeThumbnail.swift */,
 				FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */,
 			);
@@ -325,6 +328,7 @@
 				FDFDA76A23E0AF530060C1C4 /* SceneDelegate.swift in Sources */,
 				FDFDA76C23E0AF530060C1C4 /* ContentView.swift in Sources */,
 				FDFDA79E23E735300060C1C4 /* Recipe.swift in Sources */,
+				1861BAF723F19EEC0015EB7F /* RecipeScroll.swift in Sources */,
 				FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +499,7 @@
 				DEVELOPMENT_TEAM = C3H7BY5897;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LazyPlanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -515,6 +520,7 @@
 				DEVELOPMENT_TEAM = C3H7BY5897;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LazyPlanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
