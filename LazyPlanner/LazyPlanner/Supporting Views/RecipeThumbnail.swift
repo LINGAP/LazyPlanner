@@ -13,6 +13,7 @@ struct RecipeThumbnail: View {
     var width:CGFloat = 200
     var height:CGFloat = 200
     var tagSizeRatio:CGFloat = 0.15 //to adjust the relative position of nutrient and price tags
+    
   
     var body: some View {
         
@@ -28,7 +29,7 @@ struct RecipeThumbnail: View {
                     .frame(width:width*tagSizeRatio,height: height*tagSizeRatio)
                     .position(.init(x: width*tagSizeRatio, y: (1-tagSizeRatio)*height))
                     )
-                .overlay(Text("HELLO")
+                .overlay(Text(recipe.price.priceTag.rawValue)
                     .font(.callout)
                     .position(.init(x: (1-tagSizeRatio)*width, y: (1-tagSizeRatio)*height)))
 

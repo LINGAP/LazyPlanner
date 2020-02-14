@@ -10,13 +10,23 @@ import SwiftUI
 
 struct RecipeScroll: View {
     var body: some View {
-        ScrollView(.horizontal) {
-            HStack{
-                ForEach(recipeData) { recipe in
-                    RecipeThumbnail(recipe: recipe)
+        ScrollView(.vertical){
+            ScrollView(.horizontal) {
+                HStack{
+                    ForEach(recipeData) { recipe in
+                        RecipeThumbnail(recipe: recipe)
+                    }
+                }
+            }
+            ScrollView(.horizontal) {
+                HStack{
+                    ForEach(recipeData) { recipe in
+                        RecipeThumbnail(recipe: recipe)
+                    }
+                }
             }
         }
-    }
+        
 }
 
 struct RecipeScroll_Previews: PreviewProvider {
