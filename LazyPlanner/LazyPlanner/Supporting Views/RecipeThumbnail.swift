@@ -13,6 +13,7 @@ struct RecipeThumbnail: View {
     var width:CGFloat = 200
     var height:CGFloat = 200
     var tagSizeRatio:CGFloat = 0.15 //to adjust the relative position of nutrient and price tags
+    
   
     var body: some View {
         
