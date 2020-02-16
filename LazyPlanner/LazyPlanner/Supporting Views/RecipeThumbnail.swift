@@ -28,7 +28,7 @@ struct RecipeThumbnail: View {
                     .frame(width:width*tagSizeRatio,height: height*tagSizeRatio)
                     .position(.init(x: width*tagSizeRatio, y: (1-tagSizeRatio)*height))
                     )
-                .overlay(Text("HELLO")
+                .overlay(Text(recipe.price.priceTag.rawValue)
                     .font(.callout)
                     .position(.init(x: (1-tagSizeRatio)*width, y: (1-tagSizeRatio)*height)))
 

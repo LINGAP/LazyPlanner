@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1861BAF723F19EEC0015EB7F /* RecipeScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BAF623F19EEC0015EB7F /* RecipeScroll.swift */; };
-		1861BAF923F1A3AA0015EB7F /* Spaghetti-Bolognese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1861BAF823F1A3AA0015EB7F /* Spaghetti-Bolognese.jpg */; };
 		FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DA23EDEDF100A7B565 /* RecipeList.swift */; };
 		FDA939DD23F11E1300A7B565 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */; };
 		FDA939DF23F1218100A7B565 /* rice-cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939DE23F1218000A7B565 /* rice-cake.jpg */; };
+		FDA939E123F1A99200A7B565 /* Spaghetti-Bolognese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939E023F1A99200A7B565 /* Spaghetti-Bolognese.jpg */; };
 		FDFDA76823E0AF530060C1C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */; };
 		FDFDA76A23E0AF530060C1C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76923E0AF530060C1C4 /* SceneDelegate.swift */; };
 		FDFDA76C23E0AF530060C1C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76B23E0AF530060C1C4 /* ContentView.swift */; };
@@ -46,10 +46,10 @@
 
 /* Begin PBXFileReference section */
 		1861BAF623F19EEC0015EB7F /* RecipeScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeScroll.swift; sourceTree = "<group>"; };
-		1861BAF823F1A3AA0015EB7F /* Spaghetti-Bolognese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Spaghetti-Bolognese.jpg"; path = "../../../../../Spaghetti-Bolognese.jpg"; sourceTree = "<group>"; };
 		FDA939DA23EDEDF100A7B565 /* RecipeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		FDA939DE23F1218000A7B565 /* rice-cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rice-cake.jpg"; sourceTree = "<group>"; };
+		FDA939E023F1A99200A7B565 /* Spaghetti-Bolognese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Spaghetti-Bolognese.jpg"; sourceTree = "<group>"; };
 		FDFDA76423E0AF530060C1C4 /* LazyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDFDA76923E0AF530060C1C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 		FDFDA79923E728980060C1C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1861BAF823F1A3AA0015EB7F /* Spaghetti-Bolognese.jpg */,
+				FDA939E023F1A99200A7B565 /* Spaghetti-Bolognese.jpg */,
 				FDFDA7A323E7CE580060C1C4 /* seafood-risotto.jpg */,
 				FDA939DE23F1218000A7B565 /* rice-cake.jpg */,
 				FDFDA79B23E72AE20060C1C4 /* RecipeData.json */,
@@ -300,7 +300,7 @@
 				FDFDA7A423E7CE580060C1C4 /* seafood-risotto.jpg in Resources */,
 				FDFDA77123E0AF560060C1C4 /* Preview Assets.xcassets in Resources */,
 				FDFDA76E23E0AF560060C1C4 /* Assets.xcassets in Resources */,
-				1861BAF923F1A3AA0015EB7F /* Spaghetti-Bolognese.jpg in Resources */,
+				FDA939E123F1A99200A7B565 /* Spaghetti-Bolognese.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

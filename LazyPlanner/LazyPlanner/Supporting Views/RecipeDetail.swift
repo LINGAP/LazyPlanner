@@ -11,7 +11,22 @@ import SwiftUI
 struct RecipeDetail: View {
     var recipe:Recipe
     var body: some View {
-        Text(recipe.name)
+        VStack{
+            Text(recipe.name)
+            Image(recipe.imageName)
+                .resizable()
+                .frame(width: 300,height: 200)
+                .aspectRatio(contentMode: .fill)
+            List(recipe.ingredients,id: \.self){
+                ingredient in Text(ingredient)
+            }
+            List(recipe.directions,id: \.self){dir in Text(dir)
+                
+            }
+            
+
+        }
+        
     }
 }
 

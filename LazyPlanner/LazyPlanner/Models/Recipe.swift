@@ -26,6 +26,9 @@ extension Recipe {
 //    }
 }
 
+//struct Ingredients {
+//    <#fields#>
+//}
 
 
 struct Nutrients: Hashable, Codable {
@@ -62,7 +65,7 @@ struct Price: Hashable, Codable {
         }
     }
     
-    enum PriceTag: String, CaseIterable, Codable, Hashable{
+    enum PriceTag: String, CaseIterable, Codable, Hashable {
         case low = "$"
         case medium = "$$"
         case high = "$$$"
