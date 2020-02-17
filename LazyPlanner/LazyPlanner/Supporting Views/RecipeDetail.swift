@@ -12,11 +12,13 @@ struct RecipeDetail: View {
     var recipe:Recipe
     var body: some View {
         VStack{
+            Spacer()
             Text(recipe.name)
             Image(recipe.imageName)
                 .resizable()
                 .frame(width: 300,height: 200)
                 .aspectRatio(contentMode: .fill)
+            Spacer()
             List(recipe.ingredients,id: \.self){
                 ingredient in Text(ingredient)
             }
@@ -24,7 +26,6 @@ struct RecipeDetail: View {
                 
             }
             
-
         }
         
     }

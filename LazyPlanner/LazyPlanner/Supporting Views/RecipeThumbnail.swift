@@ -20,6 +20,7 @@ struct RecipeThumbnail: View {
         VStack{
            
             Image(recipe.imageName)
+                .renderingMode(.original)
                 .resizable()
                 .frame(width: 200, height: 150)
                 .aspectRatio(contentMode: .fill)
