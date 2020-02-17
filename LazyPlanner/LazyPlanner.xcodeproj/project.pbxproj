@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1861BAF723F19EEC0015EB7F /* RecipeScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BAF623F19EEC0015EB7F /* RecipeScroll.swift */; };
+		1861BC2323FA50700015EB7F /* baked-cod.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1861BC2223FA50700015EB7F /* baked-cod.jpg */; };
+		1861BC2523FA51500015EB7F /* avocado-toast.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1861BC2423FA51500015EB7F /* avocado-toast.jpg */; };
+		1861BC2723FA51580015EB7F /* chicken-noodle-soup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1861BC2623FA51580015EB7F /* chicken-noodle-soup.jpg */; };
+		1861BC2923FA53B30015EB7F /* RecipeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BC2823FA53B30015EB7F /* RecipeCategory.swift */; };
+		1861BC2B23FA55720015EB7F /* moroccan-stew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1861BC2A23FA55720015EB7F /* moroccan-stew.jpg */; };
 		FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DA23EDEDF100A7B565 /* RecipeList.swift */; };
 		FDA939DD23F11E1300A7B565 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */; };
 		FDA939DF23F1218100A7B565 /* rice-cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939DE23F1218000A7B565 /* rice-cake.jpg */; };
@@ -46,6 +51,11 @@
 
 /* Begin PBXFileReference section */
 		1861BAF623F19EEC0015EB7F /* RecipeScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeScroll.swift; sourceTree = "<group>"; };
+		1861BC2223FA50700015EB7F /* baked-cod.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "baked-cod.jpg"; sourceTree = "<group>"; };
+		1861BC2423FA51500015EB7F /* avocado-toast.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "avocado-toast.jpg"; sourceTree = "<group>"; };
+		1861BC2623FA51580015EB7F /* chicken-noodle-soup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chicken-noodle-soup.jpg"; sourceTree = "<group>"; };
+		1861BC2823FA53B30015EB7F /* RecipeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategory.swift; sourceTree = "<group>"; };
+		1861BC2A23FA55720015EB7F /* moroccan-stew.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "moroccan-stew.jpg"; sourceTree = "<group>"; };
 		FDA939DA23EDEDF100A7B565 /* RecipeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		FDA939DE23F1218000A7B565 /* rice-cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rice-cake.jpg"; sourceTree = "<group>"; };
@@ -164,6 +174,7 @@
 			children = (
 				FDFDA79D23E735300060C1C4 /* Recipe.swift */,
 				FDFDA7A523E7D2150060C1C4 /* Data.swift */,
+				1861BC2823FA53B30015EB7F /* RecipeCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,6 +193,10 @@
 		FDFDA79923E728980060C1C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1861BC2A23FA55720015EB7F /* moroccan-stew.jpg */,
+				1861BC2623FA51580015EB7F /* chicken-noodle-soup.jpg */,
+				1861BC2423FA51500015EB7F /* avocado-toast.jpg */,
+				1861BC2223FA50700015EB7F /* baked-cod.jpg */,
 				FDA939E023F1A99200A7B565 /* Spaghetti-Bolognese.jpg */,
 				FDFDA7A323E7CE580060C1C4 /* seafood-risotto.jpg */,
 				FDA939DE23F1218000A7B565 /* rice-cake.jpg */,
@@ -295,12 +310,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDFDA77423E0AF560060C1C4 /* LaunchScreen.storyboard in Resources */,
+				1861BC2723FA51580015EB7F /* chicken-noodle-soup.jpg in Resources */,
 				FDFDA79C23E72AE20060C1C4 /* RecipeData.json in Resources */,
 				FDA939DF23F1218100A7B565 /* rice-cake.jpg in Resources */,
 				FDFDA7A423E7CE580060C1C4 /* seafood-risotto.jpg in Resources */,
 				FDFDA77123E0AF560060C1C4 /* Preview Assets.xcassets in Resources */,
 				FDFDA76E23E0AF560060C1C4 /* Assets.xcassets in Resources */,
+				1861BC2B23FA55720015EB7F /* moroccan-stew.jpg in Resources */,
+				1861BC2323FA50700015EB7F /* baked-cod.jpg in Resources */,
 				FDA939E123F1A99200A7B565 /* Spaghetti-Bolognese.jpg in Resources */,
+				1861BC2523FA51500015EB7F /* avocado-toast.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDA939DD23F11E1300A7B565 /* RecipeDetail.swift in Sources */,
+				1861BC2923FA53B30015EB7F /* RecipeCategory.swift in Sources */,
 				FDFDA7A223E7CAEB0060C1C4 /* RecipeThumbnail.swift in Sources */,
 				FDFDA7A623E7D2150060C1C4 /* Data.swift in Sources */,
 				FDFDA76823E0AF530060C1C4 /* AppDelegate.swift in Sources */,

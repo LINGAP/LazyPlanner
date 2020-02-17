@@ -14,7 +14,7 @@ struct RecipeScroll: View {
             ScrollView(.vertical){
                 ScrollView(.horizontal) {
                     HStack{
-                        ForEach(recipeData) { recipe in
+                        ForEach(nonVeggie) { recipe in
                             NavigationLink(destination: RecipeDetail(recipe: recipe)){
                                 RecipeThumbnail(recipe: recipe)
                             }
@@ -23,7 +23,7 @@ struct RecipeScroll: View {
                 }
                 ScrollView(.horizontal) {
                     HStack{
-                        ForEach(recipeData) { recipe in
+                        ForEach(vegetarian) { recipe in
                             NavigationLink(destination: RecipeDetail(recipe: recipe)){
                                 RecipeThumbnail(recipe: recipe)
                             }
