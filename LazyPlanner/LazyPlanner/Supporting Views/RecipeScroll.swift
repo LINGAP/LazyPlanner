@@ -21,15 +21,15 @@ struct RecipeScroll: View {
                         }
                     }
                 }
-                ScrollView(.horizontal) {
-                    HStack{
-                        ForEach(vegetarian) { recipe in
-                            NavigationLink(destination: RecipeDetail(recipe: recipe)){
-                                RecipeThumbnail(recipe: recipe)
-                            }
-                        }
-                    }
-                }
+//                ScrollView(.horizontal) {
+//                    HStack{
+//                        ForEach(vegetarian) { recipe in
+//                            NavigationLink(destination: RecipeDetail(recipe: recipe)){
+//                                RecipeThumbnail(recipe: recipe)
+//                            }
+//                        }
+//                    }
+//                }
             }
         }
     }
