@@ -13,6 +13,12 @@ struct RecipeScroll: View {
         NavigationView{
             ScrollView(.vertical){
                 ForEach(categoryList) { category in
+                    self.padding(.bottom, 15)
+                    Text(category.name)
+                        .font(.title)
+                        .foregroundColor(Color.green)
+                        .frame(width: 200, height: 0 ,alignment: .leading)
+                        .offset(x:-70,y:10)
                     ScrollView(.horizontal) {
                         HStack{
                             ForEach(category.recipes) { recipe in
