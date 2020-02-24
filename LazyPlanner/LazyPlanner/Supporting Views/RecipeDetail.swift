@@ -19,9 +19,11 @@ struct RecipeDetail: View {
                 .frame(width: 300,height: 200)
                 .aspectRatio(contentMode: .fill)
             Spacer()
-            List(recipe.ingredients,id: \.self){
-                ingredient in Text(ingredient)
+            
+            ForEach(recipe.ingredients,id: \.self){
+                ingredient in Text(ingredient.description)
             }
+            
             List(recipe.directions,id: \.self){dir in Text(dir)
                 
             }

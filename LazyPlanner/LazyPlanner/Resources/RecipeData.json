@@ -1,12 +1,15 @@
 [
     {   "id":1,
         "name":"Seafood Risotto",
-        "ingredients":["1 cup arborio rice","4 cup stock","8 shrimp"],
+        "ingredients":[
+            {"amount": "1 cup", "ingredient_name": "arborio rice"},
+            {"amount": "4 cup", "ingredient_name": "stock"}
+        ],
  
         "directions":["Place water, bottled clam juice, and reserved juice from canned clams into a medium saucepan. Set over medium-high heat; bring to a boil, then reduce heat to low.","In a large pot or deep skillet, melt butter over medium heat. Stir in onion, and cook until softened, stirring occasionally, about 10 minutes. Stir in rice, and cook, stirring, for 3 to 5 minutes. Do not let rice brown. Pour in wine, and cook, stirring, until the wine is evaporated. Add 1/2 cup of simmering broth, and stir until the broth is almost all evaporated. Then add another 1/2 cup of broth. Stir in saffron and basil. Continue adding broth 1/2 cup at a time and stirring until the liquid has evaporated until the rice is almost al dente, about 20 minutes.","When the inside of the rice is slightly more firm than you desire in the final dish, stir in clams, flaked salmon, and 1/2 cup broth. Stir until the liquid evaporates. Season with salt and pepper. Stir in 1/2 cup broth, and stir vigorously. Remove from heat before the liquid has completely evaporated."],
         
         "nutrients":{
-            "calories":1988,
+            "calories":198,
             "protein":55.64,
             "fat":121.19,
             "carbohydrates":177.96
@@ -19,12 +22,16 @@
     },
        {   "id":2,
            "name":"Rice Cake",
-           "ingredients":["1 cup sweet rice","2 cup water","8 spoon sugar"],
+           "ingredients":[
+               {"amount": "1 cup", "ingredient_name": "sweet rice"},
+               {"amount": "2 cup", "ingredient_name": "water"},
+               {"amount": "8 spoon", "ingredient_name": "sugar"}
+           ],
     
            "directions":["Add the water, dried anchovies, and dried kelp to a shallow pot or pan.","Boil for 15 minutes over medium high heat without the lid.","When the inside of the rice is slightly more firm than you desire in the final dish, stir in clams, flaked salmon, and 1/2 cup broth. Stir until the liquid evaporates. ","Combine hot pepper paste, hot pepper flakes, and sugar in a small bowl. Remove the anchovies and kelp from the pot and add the rice cake, the mixture in the bowl, the green onion, and the optional fish cakes and hard boiled eggs. The stock will be about 2 ½ cups."],
            
            "nutrients":{
-               "calories":3044,
+               "calories":444,
                "protein":28.00,
                "fat":150.3,
                "carbohydrates":262.88
@@ -37,11 +44,15 @@
        },
        {   "id":3,
               "name":"Spaghetti Bolognese",
-              "ingredients":["400g Spaghetti","2 tbsp tomato paste","500g beef mince"],
+              "ingredients":[
+                  {"amount": "400g", "ingredient_name": "Spaghetti"},
+                  {"amount": "2 tbsp", "ingredient_name": "tomato paste"},
+                  {"amount": "500g", "ingredient_name": "beef mince"}
+              ],
        
               "directions":["Heat oil in a large pot or deep skillet over medium high heat.","Add onion and garlic, cook for 3 minutes or until light golden and softened.","Turn heat up to high and add beef. Cook, breaking it up as your go, until browned.","Add red wine. Bring to simmer and cook for 1 minute, scraping the bottom of the pot, until the alcohol smell is gone.","Add remaining ingredients except salt and pepper. Stir, bring to a simmer then turn down to medium so it bubbles gently.","Cook for 20 - 30 minutes (no lid), adding water if the sauce gets too thick for your taste. Stir occasionally. (See note 5 for slow cooking option). Adjust salt and pepper to taste right at the end."],
               "nutrients":{
-                  "calories":3044,
+                  "calories":574,
                   "protein":28.00,
                   "fat":150.3,
                   "carbohydrates":262.88
@@ -54,11 +65,17 @@
           },
        {   "id":4,
               "name":"Baked Cod",
-              "ingredients":["1 lb Cod Fillets","1 tablespoon chopped parsley","1 tablespoon lemon juice","3 dashes cayenne pepper","1/4 teaspoon salt"],
+              "ingredients":[
+                  {"amount": "1 lb", "ingredient_name": "Cod Fillets"},
+                  {"amount": "1 tablespoon", "ingredient_name": "chopped parsley"},
+                  {"amount": "1 tablespoon", "ingredient_name": "lemon juice"},
+                  {"amount": "3 dashes", "ingredient_name": "cayenne pepper"},
+                  {"amount": "1/4 teaspoon", "ingredient_name": "salt"}
+                  ],
        
               "directions":["Preheat oven to 400F.","Arrange the cod fillets in baking tray.","Drizzle the olive oil onto the fish, follow by lemon juice, salt and cayenne pepper.","Bake the cod in the oven for 10 - 12 minutes, depends on the thickness of the cod.","Garnish with parsley and serve immediately."],
               "nutrients":{
-                  "calories":3044,
+                  "calories":834,
                   "protein":28.00,
                   "fat":150.3,
                   "carbohydrates":262.88
@@ -71,11 +88,16 @@
           },
        {   "id":5,
               "name":"Avocado Toast",
-              "ingredients":["1 ripe avocado","2 slices bread of choice","Finely chopped cilantro or parsley","1 tablespoon lemon juice"],
+              "ingredients":[
+                  {"amount": "1", "ingredient_name": "ripe avocado"},
+                  {"amount": "2 slices", "ingredient_name": "bread of choice"},
+                  {"amount": "", "ingredient_name": "Finely chopped cilantro or parsley"},
+                  {"amount": "1 tablespoon", "ingredient_name": "lemon juice"}
+                  ],
        
               "directions":["Cut avocado in half and remove seed.","Toast bread to your taste, using your method of choice.","While toast is still hot, lightly rub the surface with the cut side of the garlic clove.","Use a spoon to scoop avocado flesh out, then a fork to mush it onto the toast.","Sprinkle with salt and pepper.","Squeeze over a bit of lemon juice, drizzle with olive oil, sprinkle with cilantro or parsley. Serve immediately!"],
               "nutrients":{
-                  "calories":3044,
+                  "calories":744,
                   "protein":28.00,
                   "fat":150.3,
                   "carbohydrates":262.88
@@ -88,11 +110,18 @@
           },
        {   "id":6,
               "name":"Chicken Noodle Soup",
-              "ingredients":["3 cups finely chopped chicken breast or thighs","1 cup chopped yellow onion","1.5 cups chopped carrots","1.5 cups chopped celery","8 oz pappardelle egg noodles","10 cups chicken broth or stock"],
+              "ingredients":[
+                  {"amount": "3 cups", "ingredient_name": "finely chopped chicken breast or thighs"},
+                  {"amount": "1 cup", "ingredient_name": "chopped yellow onion"},
+                  {"amount": "1.5 cups", "ingredient_name": "chopped carrots"},
+                  {"amount": "chopped carrots", "ingredient_name": "chopped celery"},
+                  {"amount": "8 oz", "ingredient_name": "pappardelle egg noodles"},
+                  {"amount": "10 cups", "ingredient_name": "chicken broth or stock"}
+              ],
        
               "directions":["Heat a soup pot over medium heat, then add the olive oil, celery, carrots, onion, salt, and black pepper. Cook for 10 minutes until softened.","Add the chicken broth and thyme, bring the soup to a boil, then reduce to a simmer over low heat.","Simmer for 10 minutes, then add the chopped chicken and simmer for 3 minutes, until the chicken is cooked through.","Taste the broth and make any necessary seasoning adjustments. Depending on the salt content of the broth you use, it may need additional salt.  "],
               "nutrients":{
-                  "calories":3044,
+                  "calories":450,
                   "protein":28.00,
                   "fat":150.3,
                   "carbohydrates":262.88
@@ -105,7 +134,14 @@
           },
        {   "id":7,
               "name":"Moroccan Stew",
-              "ingredients":["3 cups finely chopped chicken breast or thighs","1 cup chopped yellow onion","1.5 cups chopped carrots","1.5 cups chopped celery","8 oz pappardelle egg noodles","10 cups chicken broth or stock"],
+              "ingredients":[
+                  {"amount": "3 cups", "ingredient_name": "finely chopped chicken breast or thighs"},
+                  {"amount": "1 cup", "ingredient_name": "chopped yellow onion"},
+                  {"amount": "1.5 cups", "ingredient_name": "chopped carrots"},
+                  {"amount": "chopped carrots", "ingredient_name": "chopped celery"},
+                  {"amount": "8 oz", "ingredient_name": "pappardelle egg noodles"},
+                  {"amount": "10 cups", "ingredient_name": "chicken broth or stock"}
+                  ],
        
               "directions":["Heat a soup pot over medium heat, then add the olive oil, celery, carrots, onion, salt, and black pepper. Cook for 10 minutes until softened.","Add the chicken broth and thyme, bring the soup to a boil, then reduce to a simmer over low heat.","Simmer for 10 minutes, then add the chopped chicken and simmer for 3 minutes, until the chicken is cooked through.","Taste the broth and make any necessary seasoning adjustments. Depending on the salt content of the broth you use, it may need additional salt.  "],
               "nutrients":{
@@ -121,3 +157,4 @@
 
           }
 ]
+

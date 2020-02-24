@@ -11,7 +11,7 @@ import CoreLocation //I'm not sure what this does, copide from tutorial
 struct Recipe: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
-    var ingredients:[String]
+    var ingredients:[Ingredient]
     var directions:[String]
     
     var nutrients: Nutrients
@@ -26,19 +26,24 @@ extension Recipe {
 //    }
 }
 
-//struct Ingredients {
-//    <#fields#>
-//}
+struct Ingredient: Hashable, Codable, CustomStringConvertible {
+    var ingredient_name: String
+    var amount: String?
+
+    var description: String {
+        "\(amount ?? " ") |  \(ingredient_name)"
+    }
+}
 
 
 struct Nutrients: Hashable, Codable {
-    var color: ScoreColor{
-        if(calories < 500){
-            return .A
-        }else if(calories < 650){
-            return .B
+    var color: Color{
+        if(calories < 300){
+            return Color.Theme.nutritionA
+        }else if(calories < 500){
+            return Color.Theme.nutritionB
         }else{
-            return .C
+            return Color.Theme.nutritionC
         }
     }
     var calories: Int
@@ -46,11 +51,15 @@ struct Nutrients: Hashable, Codable {
     var fat: Double
     var carbohydrates: Double
     
-    enum ScoreColor: String, CaseIterable, Codable, Hashable {
-        case A = "green"
-        case B = "yellow"
-        case C = "pink"
-    }
+    
+}
+
+extension Color {
+  struct Theme {
+    static var nutritionA: Color  { return Color(red: 51, green: 153, blue: 0) }
+    static var nutritionB: Color { return Color(red: 255, green: 211, blue: 51) }
+    static var nutritionC: Color  { return Color(red: 255, green: 0, blue: 85) }
+  }
 }
 
 struct Price: Hashable, Codable {
