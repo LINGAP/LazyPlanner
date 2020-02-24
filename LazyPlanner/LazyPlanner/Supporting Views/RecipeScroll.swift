@@ -12,35 +12,20 @@ struct RecipeScroll: View {
     var body: some View {
         NavigationView{
             ScrollView(.vertical){
-                ScrollView(.horizontal) {
-                    HStack{
-                        ForEach(recipeData) { recipe in
-                            NavigationLink(destination: RecipeDetail(recipe: recipe)){
-                                RecipeThumbnail(recipe: recipe)
+                ForEach(categoryList) { category in
+                    ScrollView(.horizontal) {
+                        HStack{
+                            ForEach(category.recipes) { recipe in
+                                NavigationLink(destination: RecipeDetail(recipe: recipe)){
+                                    RecipeThumbnail(recipe: recipe)
+                                }
                             }
                         }
                     }
                 }
-//                ScrollView(.horizontal) {
-//                    HStack{
-//                        ForEach(vegetarian) { recipe in
-//                            NavigationLink(destination: RecipeDetail(recipe: recipe)){
-//                                RecipeThumbnail(recipe: recipe)
-//                            }
-//                        }
-//                    }
-//                }
             }
         }
     }
-//            ScrollView(.horizontal) {
-//                HStack{
-//                    ForEach(recipeData) { recipe in
-//                        RecipeThumbnail(recipe: recipe)
-//                    }
-//                }
-//            }
-        
 }
 
 struct RecipeScroll_Previews: PreviewProvider {

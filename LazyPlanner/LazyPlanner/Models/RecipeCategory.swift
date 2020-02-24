@@ -16,6 +16,7 @@ struct RecipeCategory: Identifiable {
     var recipes: [Recipe]
 }
 
+
 var nonVeggie: RecipeCategory = RecipeCategory(name: "Non-vegetarian", recipes: [recipeData[0],recipeData[2],recipeData[3],recipeData[5]])
 
 var vegetarian: RecipeCategory = RecipeCategory(name: "Vegetarian", recipes: [recipeData[1],recipeData[4],recipeData[6]])
