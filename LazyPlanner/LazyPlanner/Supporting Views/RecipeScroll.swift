@@ -31,6 +31,7 @@ struct RecipeScroll: View {
                 }
             }
         }
+        .offset(y:-50)
     }
 }
 
