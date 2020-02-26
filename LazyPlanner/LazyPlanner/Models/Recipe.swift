@@ -56,9 +56,9 @@ struct Nutrients: Hashable, Codable {
 
 extension Color {
   struct Theme {
-    static var nutritionA: Color  { return Color(red: 51, green: 153, blue: 0) }
-    static var nutritionB: Color { return Color(red: 255, green: 211, blue: 51) }
-    static var nutritionC: Color  { return Color(red: 255, green: 0, blue: 85) }
+    static var nutritionA: Color  { return Color(red:0, green: 204, blue: 0, opacity: 1) }
+    static var nutritionB: Color { return Color(red:204, green: 200, blue: 0, opacity: 1)  }
+    static var nutritionC: Color  { return Color(red: 255, green: 0, blue: 85, opacity: 1) }
   }
 }
 

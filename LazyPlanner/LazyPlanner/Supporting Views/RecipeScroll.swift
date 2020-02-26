@@ -13,12 +13,13 @@ struct RecipeScroll: View {
         NavigationView{
             ScrollView(.vertical){
                 ForEach(categoryList) { category in
-                    self.padding(.bottom, 15)
+                   self.padding(.bottom, 15)
+                    
                     Text(category.name)
-                        .font(.title)
+                        .font(.headline)
                         .foregroundColor(Color.green)
                         .frame(width: 200, height: 0 ,alignment: .leading)
-                        .offset(x:-70,y:10)
+                        
                     ScrollView(.horizontal) {
                         HStack{
                             ForEach(category.recipes) { recipe in
@@ -31,13 +32,16 @@ struct RecipeScroll: View {
                 }
             }
         }
-        .offset(y:-50)
     }
 }
 
 struct RecipeScroll_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeScroll()
+        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
+            RecipeScroll()
+                .previewDevice(PreviewDevice(rawValue: deviceName))
+                .previewDisplayName(deviceName)
+        }
     }
 }
 

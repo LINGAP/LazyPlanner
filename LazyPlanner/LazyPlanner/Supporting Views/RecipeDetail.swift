@@ -11,30 +11,37 @@ import SwiftUI
 struct RecipeDetail: View {
     var recipe:Recipe
     var body: some View {
-        VStack{
-            Spacer()
-            Text(recipe.name)
-            Image(recipe.imageName)
-                .resizable()
-                .frame(width: 300,height: 200)
-                .aspectRatio(contentMode: .fill)
-            Spacer()
-            
-            ForEach(recipe.ingredients,id: \.self){
-                ingredient in Text(ingredient.description)
-            }
-            
-            List(recipe.directions,id: \.self){dir in Text(dir)
+        ScrollView(.vertical){
+            VStack{
+                Image(recipe.imageName)
+                    .resizable()
+                    .scaledToFill()
+                   // .edgesIgnoringSafeArea(.top)
+                    
+                  
+                
+                Text(recipe.name)
+                    .font(.title)
+                
+                ForEach(recipe.ingredients,id: \.self){
+                    ingredient in Text(ingredient.description)
+                }
+                Spacer()
+                
+                ForEach(recipe.directions,id: \.self){dir
+                    in Text(dir)
+                }
                 
             }
-            
         }
-        
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
 struct RecipeDetail_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeDetail(recipe: recipeData[0])
+        RecipeDetail(recipe: recipeData[2])
+        
+        
     }
 }

@@ -10,37 +10,51 @@ import SwiftUI
 
 struct RecipeThumbnail: View {
     var recipe:Recipe
-    var width:CGFloat = 200
-    var height:CGFloat = 200
-    var tagSizeRatio:CGFloat = 0.15 //to adjust the relative position of nutrient and price tags
+    var width:CGFloat = 140
+    var height:CGFloat = 120
+    var tagSizeRatio:CGFloat = 0.2 //to adjust the relative position of nutrient and price tags
     
   
     var body: some View {
         
         VStack{
-           
             Image(recipe.imageName)
                 .renderingMode(.original)
                 .resizable()
-                .frame(width: 200, height: 150)
-                .aspectRatio(contentMode: .fill)
                 .frame(width:width,height: height)
-                .overlay(Circle()
-                    .fill(recipe.nutrients.color)
-                    .frame(width:width*tagSizeRatio,height: height*tagSizeRatio)
-                    .position(.init(x: width*tagSizeRatio, y: (1-tagSizeRatio)*height))
-                    )
-                .overlay(Circle()
-                    .fill(Color.white)
-                    .frame(width:width*tagSizeRatio,height: height*tagSizeRatio)
+                .aspectRatio(contentMode: .fill)
+               
+                
+                .overlay(
+                    Group {
+                        Circle()
+                        .fill(Color.white)
+                        .frame(width:width*tagSizeRatio,height: height*tagSizeRatio)
+                        
+                        Text(recipe.price.priceTag.rawValue)
+                        .font(.callout)
+                       .offset(CGSize(width: 0, height: -28))
+                    }
                     .position(.init(x: (1-tagSizeRatio)*width, y: (1-tagSizeRatio)*height))
+                    .offset(CGSize(width: 0, height: 15))
+            
+                )
+                
+                .overlay(
+                    Circle()
+                        .stroke(Color.white, lineWidth: 7)
+                    .overlay(
+                        Circle()
+                            .fill(recipe.nutrients.color)
                         )
-                .overlay(Text(recipe.price.priceTag.rawValue)
-                    .font(.callout)
-                    .position(.init(x: (1-tagSizeRatio)*width, y: (1-tagSizeRatio)*height)))
-
+                    .frame(width:width*tagSizeRatio,height: height*tagSizeRatio)
+                    .position(.init(x: tagSizeRatio*width, y: (1-tagSizeRatio)*height))
+                )
+            
             Text(recipe.name)
                 .font(.subheadline)
+                .padding(.top)
+                
             
         }
         
@@ -50,7 +64,6 @@ struct RecipeThumbnail: View {
 struct RecipeThumbnail_Previews: PreviewProvider {
     static var previews: some View {
         
-        RecipeThumbnail(recipe:recipeData[0])
-        
+        RecipeThumbnail(recipe:recipeData[2])
     }
 }
