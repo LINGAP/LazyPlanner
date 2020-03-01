@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct RecipeThumbnail: View {
-    var recipe:Recipe
-    var width:CGFloat = 140
-    var height:CGFloat = 120
-    var tagSizeRatio:CGFloat = 0.2 //to adjust the relative position of nutrient and price tags
+    var recipe: Recipe
+    var imageWidth: CGFloat = 140
+    var imageHeight: CGFloat = 120
+    var tagSizeRatio: CGFloat = 0.2 //to adjust the relative position of nutrient and price tags
     
   
     var body: some View {
@@ -21,25 +21,26 @@ struct RecipeThumbnail: View {
             Image(recipe.imageName)
                 .renderingMode(.original)
                 .resizable()
-                .frame(width:width,height: height)
+                .frame(width: imageWidth,height: imageHeight)
                 .aspectRatio(contentMode: .fill)
                
-                
+                //Price
                 .overlay(
                     Group {
                         Circle()
                         .fill(Color.white)
-                        .frame(width:width*tagSizeRatio,height: height*tagSizeRatio)
+                        .frame(width: imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
                         
                         Text(recipe.price.priceTag.rawValue)
                         .font(.callout)
                        .offset(CGSize(width: 0, height: -28))
                     }
-                    .position(.init(x: (1-tagSizeRatio)*width, y: (1-tagSizeRatio)*height))
+                    .position(.init(x: (1-tagSizeRatio)*imageWidth, y: (1-tagSizeRatio)*imageHeight))
                     .offset(CGSize(width: 0, height: 15))
             
                 )
                 
+                //Nutrition
                 .overlay(
                     Circle()
                         .stroke(Color.white, lineWidth: 7)
@@ -47,8 +48,8 @@ struct RecipeThumbnail: View {
                         Circle()
                             .fill(recipe.nutrients.color)
                         )
-                    .frame(width:width*tagSizeRatio,height: height*tagSizeRatio)
-                    .position(.init(x: tagSizeRatio*width, y: (1-tagSizeRatio)*height))
+                    .frame(width:imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
+                    .position(.init(x: tagSizeRatio*imageWidth, y: (1-tagSizeRatio)*imageHeight))
                 )
             
             Text(recipe.name)
