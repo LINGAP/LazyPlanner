@@ -18,18 +18,42 @@ struct RecipeDetail: View {
                     .scaledToFill()
                    // .edgesIgnoringSafeArea(.top)
                     
-                  
+                  //ingredients
                 
                 Text(recipe.name)
                     .font(.title)
                 
                 ForEach(recipe.ingredients,id: \.self){
-                    ingredient in Text(ingredient.description)
+                    ingredient in HStack{
+//                        UIStackView(arrangedSubviews: String.map(ingredient.ingredient_name))
+                        Text("\(ingredient.ingredient_name)")
+                            
+                        Spacer()
+                        Divider()
+                       //.alignmentGuide(.leading) { d in d[.leading] }
+                         //   .frame(alignment: .leading)
+                           
+                        
+                        Spacer()
+                            Text("\(ingredient.amount ?? " ")")
+                               // .multilineTextAlignment(.trailing)
+                                //.alignmentGuide(.leading) { d in d[.trailing] }
+                    }.padding(.horizontal)
+                       
                 }
-                Spacer()
+                Divider()
+                
+                Text("Direction")
+                    .font(.headline)
+                    .multilineTextAlignment(.leading)
+                    
                 
                 ForEach(recipe.directions,id: \.self){dir
-                    in Text(dir)
+                    in HStack(spacing: 20) {
+                        Text("\u{2022}")
+                        Text(dir)
+                        Spacer()
+                    }
                 }
                 
             }
@@ -40,7 +64,7 @@ struct RecipeDetail: View {
 
 struct RecipeDetail_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeDetail(recipe: recipeData[2])
+        RecipeDetail(recipe: recipeData[3])
         
         
     }
