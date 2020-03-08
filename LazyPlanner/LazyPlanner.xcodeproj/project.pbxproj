@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		1861BC2723FA51580015EB7F /* chicken-noodle-soup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1861BC2623FA51580015EB7F /* chicken-noodle-soup.jpg */; };
 		1861BC2923FA53B30015EB7F /* RecipeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BC2823FA53B30015EB7F /* RecipeCategory.swift */; };
 		1861BC2B23FA55720015EB7F /* moroccan-stew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1861BC2A23FA55720015EB7F /* moroccan-stew.jpg */; };
+		18AF9C8E2414824C000B4A56 /* Siesta in Frameworks */ = {isa = PBXBuildFile; productRef = 18AF9C8D2414824C000B4A56 /* Siesta */; };
+		18AF9C902414824C000B4A56 /* SiestaUI in Frameworks */ = {isa = PBXBuildFile; productRef = 18AF9C8F2414824C000B4A56 /* SiestaUI */; };
 		FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DA23EDEDF100A7B565 /* RecipeList.swift */; };
 		FDA939DD23F11E1300A7B565 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */; };
 		FDA939DF23F1218100A7B565 /* rice-cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939DE23F1218000A7B565 /* rice-cake.jpg */; };
@@ -86,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18AF9C8E2414824C000B4A56 /* Siesta in Frameworks */,
+				18AF9C902414824C000B4A56 /* SiestaUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +225,10 @@
 			dependencies = (
 			);
 			name = LazyPlanner;
+			packageProductDependencies = (
+				18AF9C8D2414824C000B4A56 /* Siesta */,
+				18AF9C8F2414824C000B4A56 /* SiestaUI */,
+			);
 			productName = LazyPlanner;
 			productReference = FDFDA76423E0AF530060C1C4 /* LazyPlanner.app */;
 			productType = "com.apple.product-type.application";
@@ -293,6 +301,9 @@
 				Base,
 			);
 			mainGroup = FDFDA75B23E0AF530060C1C4;
+			packageReferences = (
+				18AF9C8C2414824B000B4A56 /* XCRemoteSwiftPackageReference "siesta" */,
+			);
 			productRefGroup = FDFDA76523E0AF530060C1C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -682,6 +693,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18AF9C8C2414824B000B4A56 /* XCRemoteSwiftPackageReference "siesta" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bustoutsolutions/siesta";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18AF9C8D2414824C000B4A56 /* Siesta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18AF9C8C2414824B000B4A56 /* XCRemoteSwiftPackageReference "siesta" */;
+			productName = Siesta;
+		};
+		18AF9C8F2414824C000B4A56 /* SiestaUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18AF9C8C2414824B000B4A56 /* XCRemoteSwiftPackageReference "siesta" */;
+			productName = SiestaUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FDFDA75C23E0AF530060C1C4 /* Project object */;
 }

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Siesta",
+        "repositoryURL": "https://github.com/bustoutsolutions/siesta",
+        "state": {
+          "branch": "master",
+          "revision": "0cbb11373eafc6c7d60f07e5bfac8fd6de496e33",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
