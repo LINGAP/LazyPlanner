@@ -19,7 +19,7 @@ struct TestRecipe: Codable {
     var title: String
 }
 
-struct contentView: View {
+struct ContentView: View {
     @State var testRecipes = [TestRecipe]()
     var body: some View {
         List(testRecipes, id: \.id){ testRecipe in
@@ -42,6 +42,7 @@ struct contentView: View {
             if let data = data{
                 if let decodedResponse = try? JSONDecoder().decode(TestRecipes.self, from: data){
                     DispatchQueue.main.async{
+                        print("succeed!")
                         self.testRecipes = decodedResponse.testRecipes
                     }
                     return
@@ -52,7 +53,7 @@ struct contentView: View {
     }
 }
 
-struct contentView_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }

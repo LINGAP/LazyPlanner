@@ -23,7 +23,6 @@
 		FDA939E123F1A99200A7B565 /* Spaghetti-Bolognese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939E023F1A99200A7B565 /* Spaghetti-Bolognese.jpg */; };
 		FDFDA76823E0AF530060C1C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */; };
 		FDFDA76A23E0AF530060C1C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76923E0AF530060C1C4 /* SceneDelegate.swift */; };
-		FDFDA76C23E0AF530060C1C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76B23E0AF530060C1C4 /* ContentView.swift */; };
 		FDFDA76E23E0AF560060C1C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFDA76D23E0AF560060C1C4 /* Assets.xcassets */; };
 		FDFDA77123E0AF560060C1C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFDA77023E0AF560060C1C4 /* Preview Assets.xcassets */; };
 		FDFDA77423E0AF560060C1C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDFDA77223E0AF560060C1C4 /* LaunchScreen.storyboard */; };
@@ -69,7 +68,6 @@
 		FDFDA76423E0AF530060C1C4 /* LazyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDFDA76923E0AF530060C1C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FDFDA76B23E0AF530060C1C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FDFDA76D23E0AF560060C1C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDFDA77023E0AF560060C1C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FDFDA77323E0AF560060C1C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 				FDFDA79723E7284E0060C1C4 /* Models */,
 				FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */,
 				FDFDA76923E0AF530060C1C4 /* SceneDelegate.swift */,
-				FDFDA76B23E0AF530060C1C4 /* ContentView.swift */,
 				FDFDA76D23E0AF560060C1C4 /* Assets.xcassets */,
 				FDFDA77223E0AF560060C1C4 /* LaunchScreen.storyboard */,
 				FDFDA77523E0AF560060C1C4 /* Info.plist */,
@@ -375,7 +372,6 @@
 				FDFDA7A623E7D2150060C1C4 /* Data.swift in Sources */,
 				FDFDA76823E0AF530060C1C4 /* AppDelegate.swift in Sources */,
 				FDFDA76A23E0AF530060C1C4 /* SceneDelegate.swift in Sources */,
-				FDFDA76C23E0AF530060C1C4 /* ContentView.swift in Sources */,
 				FDFDA79E23E735300060C1C4 /* Recipe.swift in Sources */,
 				1861BAF723F19EEC0015EB7F /* RecipeScroll.swift in Sources */,
 				18AF9C9224148A0B000B4A56 /* RecipeAPI.swift in Sources */,
