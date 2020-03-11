@@ -117,7 +117,6 @@
 		18AF9C9424148AFF000B4A56 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				18AF9C9124148A0B000B4A56 /* RecipeAPI.swift */,
 				18B098F72418AD6D00DD5B76 /* testData.swift */,
 				18B098F92418ADC900DD5B76 /* testRun.swift */,
 			);
@@ -147,6 +146,7 @@
 		FDFDA76623E0AF530060C1C4 /* LazyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				18AF9C9124148A0B000B4A56 /* RecipeAPI.swift */,
 				18AF9C9424148AFF000B4A56 /* Controller */,
 				FDFDA79823E728700060C1C4 /* Supporting Views */,
 				FDFDA79723E7284E0060C1C4 /* Models */,

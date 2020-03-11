@@ -31,16 +31,24 @@ struct testRun: View {
         let request = URLRequest(url: url)
         
         URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data{
-                if let decodedResponse = try? JSONDecoder().decode(TestRecipes.self, from: data){
-                    DispatchQueue.main.async{
-                        print("succeed!")
-                        self.testRecipes = decodedResponse.testRecipes
-                    }
-                    return
-                }
+            do {
+                let decoder = JSONDecoder()
+                let decodedResponse = try decoder.decode(TestRecipes.self, from: data!)
+                print(decodedResponse)
             }
-            print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
+            catch {
+                print("Error: \(error)")
+            }
+//            if let data = data{
+//                if let decodedResponse = try? JSONDecoder().decode(TestRecipes.self, from: data){
+//                    DispatchQueue.main.async{
+//                        print("succeed!")
+//                        self.testRecipes = decodedResponse.testRecipes
+//                    }
+//                    return
+//                }
+//            }
+//            print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
         }.resume()
     }
 }

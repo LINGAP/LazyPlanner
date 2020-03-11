@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct TestRecipes: Codable {
-    var testRecipes: [TestRecipe]
+struct RecipeCollection: Codable {
+    var recipes: [TestRecipe]
 }
 
 struct TestRecipe: Codable {
