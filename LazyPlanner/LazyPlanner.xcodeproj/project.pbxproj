@@ -15,6 +15,8 @@
 		1861BC2B23FA55720015EB7F /* moroccan-stew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1861BC2A23FA55720015EB7F /* moroccan-stew.jpg */; };
 		18AF9C8E2414824C000B4A56 /* Siesta in Frameworks */ = {isa = PBXBuildFile; productRef = 18AF9C8D2414824C000B4A56 /* Siesta */; };
 		18AF9C902414824C000B4A56 /* SiestaUI in Frameworks */ = {isa = PBXBuildFile; productRef = 18AF9C8F2414824C000B4A56 /* SiestaUI */; };
+		18AF9C9224148A0B000B4A56 /* RecipeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF9C9124148A0B000B4A56 /* RecipeAPI.swift */; };
+		18B098F4241890F400DD5B76 /* TestRecipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B098F3241890F400DD5B76 /* TestRecipes.swift */; };
 		FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DA23EDEDF100A7B565 /* RecipeList.swift */; };
 		FDA939DD23F11E1300A7B565 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */; };
 		FDA939DF23F1218100A7B565 /* rice-cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939DE23F1218000A7B565 /* rice-cake.jpg */; };
@@ -58,6 +60,8 @@
 		1861BC2623FA51580015EB7F /* chicken-noodle-soup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chicken-noodle-soup.jpg"; sourceTree = "<group>"; };
 		1861BC2823FA53B30015EB7F /* RecipeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategory.swift; sourceTree = "<group>"; };
 		1861BC2A23FA55720015EB7F /* moroccan-stew.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "moroccan-stew.jpg"; sourceTree = "<group>"; };
+		18AF9C9124148A0B000B4A56 /* RecipeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAPI.swift; sourceTree = "<group>"; };
+		18B098F3241890F400DD5B76 /* TestRecipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRecipes.swift; sourceTree = "<group>"; };
 		FDA939DA23EDEDF100A7B565 /* RecipeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		FDA939DE23F1218000A7B565 /* rice-cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rice-cake.jpg"; sourceTree = "<group>"; };
@@ -110,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18AF9C9424148AFF000B4A56 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18AF9C9124148A0B000B4A56 /* RecipeAPI.swift */,
+				18B098F3241890F400DD5B76 /* TestRecipes.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		FDFDA75B23E0AF530060C1C4 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +146,7 @@
 		FDFDA76623E0AF530060C1C4 /* LazyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				18AF9C9424148AFF000B4A56 /* Controller */,
 				FDFDA79823E728700060C1C4 /* Supporting Views */,
 				FDFDA79723E7284E0060C1C4 /* Models */,
 				FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */,
@@ -364,7 +378,9 @@
 				FDFDA76C23E0AF530060C1C4 /* ContentView.swift in Sources */,
 				FDFDA79E23E735300060C1C4 /* Recipe.swift in Sources */,
 				1861BAF723F19EEC0015EB7F /* RecipeScroll.swift in Sources */,
+				18AF9C9224148A0B000B4A56 /* RecipeAPI.swift in Sources */,
 				FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */,
+				18B098F4241890F400DD5B76 /* TestRecipes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,8 +459,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = ZQ8LQ9LJRK;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -465,6 +484,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -503,8 +523,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = ZQ8LQ9LJRK;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -518,6 +541,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

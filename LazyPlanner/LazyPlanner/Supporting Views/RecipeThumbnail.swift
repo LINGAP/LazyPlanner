@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct RecipeThumbnail: View {
+    
     var recipe: Recipe
     var imageWidth: CGFloat = 140
     var imageHeight: CGFloat = 120
