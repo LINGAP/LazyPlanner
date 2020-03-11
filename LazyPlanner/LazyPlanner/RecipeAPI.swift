@@ -12,16 +12,22 @@ import Siesta
 class RecipeAPI: Service {
     
     init() {
-        super.init(baseURL: "https://api.spoonacular.com/")
-//        recipes/random?number=3&apiKey=56cf9661e8104e9089c6fd4bb8f82dad"
+        super.init(baseURL: "https://api.spoonacular.com/",standardTransformers: [.text,.image])
+
+        SiestaLog.Category.enabled = .detailed
+
+        configureTransformer("/recipes/**"){
+            try self.jsonDecoder.decode(RecipeCollection.self, from: $0.content)
+        }
     }
     
     let jsonDecoder = JSONDecoder()
     
     func randomRecipes(count: Int) -> Resource {
-        return resource("/recipes/random").withParam("number", String(count))
+        return resource("/recipes/random")
+            .withParam("number", String(count))
+            .withParam("apiKey", "56cf9661e8104e9089c6fd4bb8f82dad")
     }
-    
 }
 
 let recipeAPI = RecipeAPI()
