@@ -1,8 +1,8 @@
 //
-//  TestRecipe.swift
+//  testRun.swift
 //  LazyPlanner
 //
-//  Created by vodkachamber on 3/10/20.
+//  Created by vodkachamber on 3/11/20.
 //  Copyright © 2020 Stephanie Le, Ling Ma. All rights reserved.
 //
 
@@ -10,16 +10,8 @@ import Foundation
 import SwiftUI
 import Siesta
 
-struct TestRecipes: Codable {
-    var testRecipes: [TestRecipe]
-}
 
-struct TestRecipe: Codable {
-    var id: Int
-    var title: String
-}
-
-struct ContentView: View {
+struct testRun: View {
     @State var testRecipes = [TestRecipe]()
     var body: some View {
         List(testRecipes, id: \.id){ testRecipe in
@@ -55,6 +47,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        testRun()
     }
 }
