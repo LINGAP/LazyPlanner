@@ -9,25 +9,40 @@
 import Foundation
 import Siesta
 
+class ResourceOwner{
+}
+
 class RecipeAPI: Service {
+    let jsonDecoder = JSONDecoder()
     
     init() {
         super.init(baseURL: "https://api.spoonacular.com/",standardTransformers: [.text,.image])
 
-        SiestaLog.Category.enabled = .detailed
-
-        configureTransformer("/recipes/**"){
-            try self.jsonDecoder.decode(RecipeCollection.self, from: $0.content)
+       // SiestaLog.Category.enabled = .detailed //print log
+//mutateRequest
+        configureTransformer("/recipes/*"){//configure parse
+            try self.jsonDecoder.decode(MainRecipeCollection.self, from: $0.content)
         }
     }
-    
-    let jsonDecoder = JSONDecoder()
     
     func randomRecipes(count: Int) -> Resource {
         return resource("/recipes/random")
             .withParam("number", String(count))
+      //  .withParam("tag",tags )
             .withParam("apiKey", "56cf9661e8104e9089c6fd4bb8f82dad")
     }
+    
+    func nutritionBreakdown(id:String) -> Resource {
+        return resource("recipes").child(id).child("nutritionWidget")
+        .withParam("apiKey", "56cf9661e8104e9089c6fd4bb8f82dad")
+    }
+    
+    
+    
+    
 }
 
 let recipeAPI = RecipeAPI()
+
+
+

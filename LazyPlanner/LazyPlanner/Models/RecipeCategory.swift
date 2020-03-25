@@ -21,4 +21,6 @@ var nonVeggie: RecipeCategory = RecipeCategory(name: "Non-vegetarian", recipes: 
 
 var vegetarian: RecipeCategory = RecipeCategory(name: "Vegetarian", recipes: [recipeData[1],recipeData[4],recipeData[6]])
 
+//var dessert:RecipeCategory = RecipeCategory(name: "Dessert", recipes:recipeAPI.loadRecipeCategory(tags:["dessert"]) )
+
 var categoryList: [RecipeCategory] = [nonVeggie, vegetarian]

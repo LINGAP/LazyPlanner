@@ -7,51 +7,59 @@
 //
 
 import SwiftUI
-import CoreLocation //I'm not sure what this does, copide from tutorial
-struct Recipe: Hashable, Codable, Identifiable {
+import CoreLocation
+
+struct MainRecipeCollection: Codable {
+    var recipes: [Recipe]
+}
+
+struct Recipe: Codable, Identifiable {
     var id: Int
-    var name: String
-    var ingredients:[Ingredient]
-    var directions:[String]
+    var title: String
+    var author:String?
+    var readyInMinutes:Int
+    var image:String
+    
+    var extendedIngredients:[Ingredient]
+//    var ingredients:[Ingredient]
+    var instructions:String
+    var steps:[String]{
+        return instructions.split(separator: "\n").map(String.init)
+    }
+    
     
     var nutrients: Nutrients
     var price:Price
-    var imageName:String
+    
 
 }
 
-extension Recipe {
-//    var image: Image {
-//        ImageStore.shared.image(name: imageName)//ImageStore is in Data.swift, copy-pasted from the tutorial
-//    }
-}
+
 
 struct Ingredient: Hashable, Codable, CustomStringConvertible {
-    var ingredient_name: String
+    var id:Int
+    var aisle:String
+    var name: String
     var amount: String?
-
+    var unit:String
     var description: String {
-        "\(amount ?? " ") |  \(ingredient_name)"
+        "\(amount ?? " ") \(unit) |  \(name)"
     }
 }
 
 
 struct Nutrients: Hashable, Codable {
     var color: Color{
-        if(calories < 300){
+        if(healthScore > 70){
             return Color.Theme.nutritionA
-        }else if(calories < 500){
+        }else if(healthScore > 40){
             return Color.Theme.nutritionB
         }else{
             return Color.Theme.nutritionC
         }
     }
-    var calories: Int
-    var protein: Double
-    var fat: Double
-    var carbohydrates: Double
     
-    
+    var healthScore: Int
 }
 
 extension Color {
@@ -63,11 +71,11 @@ extension Color {
 }
 
 struct Price: Hashable, Codable {
-    var totalPrice: Double
+    var pricePerServing: Double
     var priceTag: PriceTag {
-        if totalPrice < 5 {
+        if (pricePerServing < 150) {
             return .low
-        } else if totalPrice < 10 {
+        } else if (pricePerServing < 300) {
             return .medium
         } else {
             return .high

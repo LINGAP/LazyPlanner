@@ -19,7 +19,7 @@ struct RecipeThumbnail: View {
     var body: some View {
         
         VStack{
-            Image(recipe.imageName)
+            Image(recipe.image)
                 .renderingMode(.original)
                 .resizable()
                 .frame(width: imageWidth,height: imageHeight)
@@ -53,11 +53,10 @@ struct RecipeThumbnail: View {
                     .position(.init(x: tagSizeRatio*imageWidth, y: (1-tagSizeRatio)*imageHeight))
                 )
             
-            Text(recipe.name)
+            Text(recipe.title)
                 .font(.subheadline)
                 .padding(.top)
                 
-            
         }
         
     }

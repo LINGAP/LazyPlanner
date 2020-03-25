@@ -13,20 +13,19 @@ struct RecipeDetail: View {
     var body: some View {
         ScrollView(.vertical){
             VStack{
-                Image(recipe.imageName)
+                Image(recipe.image)
                     .resizable()
                     .scaledToFill()
                    // .edgesIgnoringSafeArea(.top)
                     
                   //ingredients
+                Text(recipe.title)
+                    .font(.caption)
                 
-                Text(recipe.name)
-                    .font(.title)
-                
-                ForEach(recipe.ingredients,id: \.self){
+                ForEach(recipe.extendedIngredients,id: \.id){
                     ingredient in HStack{
-//                        UIStackView(arrangedSubviews: String.map(ingredient.ingredient_name))
-                        Text("\(ingredient.ingredient_name)")
+
+                        Text("\(ingredient.name)")
                             
                         Spacer()
                         Divider()
@@ -43,12 +42,12 @@ struct RecipeDetail: View {
                 }
                 Divider()
                 
-                Text("Direction")
+                Text("Instructions")
                     .font(.headline)
                     .multilineTextAlignment(.leading)
                     
                 
-                ForEach(recipe.directions,id: \.self){dir
+                ForEach(recipe.steps,id: \.self){dir
                     in HStack(spacing: 20) {
                         Text("\u{2022}")
                         Text(dir)
