@@ -34,7 +34,7 @@ struct RecipeDetail: View {
                            
                         
                         Spacer()
-                            Text("\(ingredient.amount ?? " ")")
+                            Text("\(ingredient.amount ?? 0)")
                                // .multilineTextAlignment(.trailing)
                                 //.alignmentGuide(.leading) { d in d[.trailing] }
                     }.padding(.horizontal)

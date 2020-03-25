@@ -21,7 +21,7 @@ struct Recipe: Codable, Identifiable {
     var image:String
     
     var extendedIngredients:[Ingredient]
-//    var ingredients:[Ingredient]
+
     var instructions:String
     var steps:[String]{
         return instructions.split(separator: "\n").map(String.init)
@@ -40,10 +40,10 @@ struct Ingredient: Hashable, Codable, CustomStringConvertible {
     var id:Int
     var aisle:String
     var name: String
-    var amount: String?
+    var amount: Int?
     var unit:String
     var description: String {
-        "\(amount ?? " ") \(unit) |  \(name)"
+        "\(amount ?? 0) \(unit) |  \(name)"
     }
 }
 

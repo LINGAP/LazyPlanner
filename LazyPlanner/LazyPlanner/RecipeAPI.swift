@@ -18,7 +18,7 @@ class RecipeAPI: Service {
     init() {
         super.init(baseURL: "https://api.spoonacular.com/",standardTransformers: [.text,.image])
 
-       // SiestaLog.Category.enabled = .detailed //print log
+        SiestaLog.Category.enabled = .detailed //print log
 //mutateRequest
         configureTransformer("/recipes/*"){//configure parse
             try self.jsonDecoder.decode(MainRecipeCollection.self, from: $0.content)

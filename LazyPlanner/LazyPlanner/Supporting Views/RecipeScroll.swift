@@ -54,8 +54,12 @@ struct RecipeScroll: View {
         recommendedRecipesResource.addObserver(owner: resourceOwner){
             _,_  in
             let mainRecipeCollection: MainRecipeCollection? = self.recommendedRecipesResource.latestData?.typedContent()
-            
+            print("  DEbug  \(mainRecipeCollection.debugDescription)")
             self.randomRecipes = mainRecipeCollection?.recipes ?? []
+        }
+        
+        if(!self.recommendedRecipesResource.isLoading){
+            print("ERRRR \(self.recommendedRecipesResource.latestError?.userMessage ?? "unknown error in last request") ")
         }
         
         //TODO:new Data
@@ -66,6 +70,7 @@ struct RecipeScroll: View {
         
         //Load if Needed
         recommendedRecipesResource.loadIfNeeded()
+        
     }
     
     func refresh(){
