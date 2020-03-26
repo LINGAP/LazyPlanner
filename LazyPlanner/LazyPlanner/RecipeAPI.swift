@@ -18,10 +18,11 @@ class RecipeAPI: Service {
     init() {
         super.init(baseURL: "https://api.spoonacular.com/",standardTransformers: [.text,.image])
 
-        SiestaLog.Category.enabled = .detailed //print log
+        SiestaLog.Category.enabled = .all //print log
 //mutateRequest
         configureTransformer("/recipes/*"){//configure parse
             try self.jsonDecoder.decode(MainRecipeCollection.self, from: $0.content)
+            
         }
     }
     
@@ -33,7 +34,7 @@ class RecipeAPI: Service {
     }
     
     func nutritionBreakdown(id:String) -> Resource {
-        return resource("recipes").child(id).child("nutritionWidget")
+        return resource("recipes").child(id).child("nutritionWidget.json")
         .withParam("apiKey", "56cf9661e8104e9089c6fd4bb8f82dad")
     }
     

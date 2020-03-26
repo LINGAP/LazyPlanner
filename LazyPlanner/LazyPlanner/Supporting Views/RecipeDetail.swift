@@ -13,9 +13,9 @@ struct RecipeDetail: View {
     var body: some View {
         ScrollView(.vertical){
             VStack{
-                Image(recipe.image)
-                    .resizable()
-                    .scaledToFill()
+//                Image(recipe.image)
+//                    .resizable()
+//                    .scaledToFill()
                    // .edgesIgnoringSafeArea(.top)
                     
                   //ingredients

@@ -12,7 +12,7 @@ import Siesta
 struct RecipeScroll: View {
     @State var randomRecipes = [Recipe]()
     let resourceOwner = ResourceOwner()
-    let recommendedRecipesResource =  recipeAPI.randomRecipes(count:5)
+    var recipeResource =  recipeAPI.randomRecipes(count:5)
     var body: some View {
         NavigationView{
             
@@ -50,17 +50,35 @@ struct RecipeScroll: View {
     }
     
     func loadData()  {
-       
-        recommendedRecipesResource.addObserver(owner: resourceOwner){
+        
+//           guard let url = URL(string: "https://api.spoonacular.com/recipes/random?number=3&apiKey=56cf9661e8104e9089c6fd4bb8f82dad") else {
+//                    print("invalid URL")
+//                    return
+//                }
+//
+//                let request = URLRequest(url: url)
+//
+//                URLSession.shared.dataTask(with: request) { data, response, error in
+//                    do {
+//                        let decoder = JSONDecoder()
+//                        let decodedResponse = try decoder.decode(MainRecipeCollection.self, from: data!)
+//                        print(decodedResponse)
+//                    }
+//                    catch {
+//                        print("Error: \(error)")
+//                    }
+//        }
+        recipeResource.addObserver(owner: resourceOwner){
             _,_  in
-            let mainRecipeCollection: MainRecipeCollection? = self.recommendedRecipesResource.latestData?.typedContent()
+            let mainRecipeCollection: MainRecipeCollection? = self.recipeResource.latestData?.typedContent()
             print("  DEbug  \(mainRecipeCollection.debugDescription)")
             self.randomRecipes = mainRecipeCollection?.recipes ?? []
+            
+            if(!self.recipeResource.isLoading && (self.recipeResource.latestError != nil)){
+                print("ERRRR \(self.recipeResource.latestError?.userMessage ?? "unknown error in last request") ")
+            }
         }
-        
-        if(!self.recommendedRecipesResource.isLoading){
-            print("ERRRR \(self.recommendedRecipesResource.latestError?.userMessage ?? "unknown error in last request") ")
-        }
+
         
         //TODO:new Data
 //        if(keep scrolling down){
@@ -69,23 +87,23 @@ struct RecipeScroll: View {
         
         
         //Load if Needed
-        recommendedRecipesResource.loadIfNeeded()
+        recipeResource.loadIfNeeded()
         
     }
     
     func refresh(){
- //       self.recommendedRecipesResource = recommendedRecipesResource.load()
+//        self.recommendedRecipesResource = recipeResource.load()
 //            .onSuccess { data in print("Wow! Data!") }
 //            .onFailure { error in print("Oh, bummer.") }
         
         // Loading
-        if(recommendedRecipesResource.isRequesting || recommendedRecipesResource.isLoading){
+        if(recipeResource.isLoading){
             //TODO:show spinner
         }
         
         
         //TODO:hide spinner
-        if((recommendedRecipesResource.latestError) != nil){
+        if((recipeResource.latestError) != nil){
           //  resourceChanged(recommendedRecipesResource,event: nil)
         }
         //TODO:show cached data

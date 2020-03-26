@@ -18,7 +18,7 @@ struct Recipe: Codable, Identifiable {
     var title: String
     var author:String?
     var readyInMinutes:Int
-    var image:String
+    var image:String?
     
     var extendedIngredients:[Ingredient]
 
@@ -28,8 +28,8 @@ struct Recipe: Codable, Identifiable {
     }
     
     
-    var nutrients: Nutrients
-    var price:Price
+    var nutrients: Nutrients?
+    var price:Price?
     
 
 }
@@ -40,7 +40,7 @@ struct Ingredient: Hashable, Codable, CustomStringConvertible {
     var id:Int
     var aisle:String
     var name: String
-    var amount: Int?
+    var amount: Double?
     var unit:String
     var description: String {
         "\(amount ?? 0) \(unit) |  \(name)"
@@ -58,6 +58,8 @@ struct Nutrients: Hashable, Codable {
             return Color.Theme.nutritionC
         }
     }
+    
+    var visulBreakdown:String{"Nil"}
     
     var healthScore: Int
 }
