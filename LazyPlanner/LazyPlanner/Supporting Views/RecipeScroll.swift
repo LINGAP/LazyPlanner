@@ -112,7 +112,7 @@ struct RecipeScroll: View {
     func resourceChanged(_ resource: Resource, event: ResourceEvent) {
         // The convenience .jsonDict accessor returns empty dict if no
         // data, so the same code can both populate and clear fields.
-        let json = resource.jsonDict
+        _ = resource.jsonDict
         //nameLabel.text = json["name"] as? String
         //favoriteColorLabel.text = json["favoriteColor"] as? String
 
@@ -122,7 +122,8 @@ struct RecipeScroll: View {
 
 struct RecipeScroll_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
+        //"iPhone SE"
+        ForEach(["iPhone XS Max"], id: \.self) { deviceName in
             RecipeScroll()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)

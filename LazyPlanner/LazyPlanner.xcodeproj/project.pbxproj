@@ -22,6 +22,7 @@
 		FDA939DD23F11E1300A7B565 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */; };
 		FDA939DF23F1218100A7B565 /* rice-cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939DE23F1218000A7B565 /* rice-cake.jpg */; };
 		FDA939E123F1A99200A7B565 /* Spaghetti-Bolognese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939E023F1A99200A7B565 /* Spaghetti-Bolognese.jpg */; };
+		FDC0EED62431B22C00260F8E /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0EED52431B22C00260F8E /* DayCell.swift */; };
 		FDFDA76823E0AF530060C1C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */; };
 		FDFDA76A23E0AF530060C1C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76923E0AF530060C1C4 /* SceneDelegate.swift */; };
 		FDFDA76E23E0AF560060C1C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFDA76D23E0AF560060C1C4 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		FDA939DE23F1218000A7B565 /* rice-cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rice-cake.jpg"; sourceTree = "<group>"; };
 		FDA939E023F1A99200A7B565 /* Spaghetti-Bolognese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Spaghetti-Bolognese.jpg"; sourceTree = "<group>"; };
+		FDC0EED52431B22C00260F8E /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		FDFDA76423E0AF530060C1C4 /* LazyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDFDA76923E0AF530060C1C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 				18B098F92418ADC900DD5B76 /* testRun.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		FDC0EED42431B1F400260F8E /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				FDC0EED52431B22C00260F8E /* DayCell.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		FDFDA75B23E0AF530060C1C4 = {
@@ -200,6 +210,7 @@
 		FDFDA79823E728700060C1C4 /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
+				FDC0EED42431B1F400260F8E /* Calendar */,
 				FDA939DA23EDEDF100A7B565 /* RecipeList.swift */,
 				1861BAF623F19EEC0015EB7F /* RecipeScroll.swift */,
 				FDFDA7A123E7CAEB0060C1C4 /* RecipeThumbnail.swift */,
@@ -373,6 +384,7 @@
 				1861BC2923FA53B30015EB7F /* RecipeCategory.swift in Sources */,
 				FDFDA7A223E7CAEB0060C1C4 /* RecipeThumbnail.swift in Sources */,
 				FDFDA7A623E7D2150060C1C4 /* Data.swift in Sources */,
+				FDC0EED62431B22C00260F8E /* DayCell.swift in Sources */,
 				FDFDA76823E0AF530060C1C4 /* AppDelegate.swift in Sources */,
 				FDFDA76A23E0AF530060C1C4 /* SceneDelegate.swift in Sources */,
 				FDFDA79E23E735300060C1C4 /* Recipe.swift in Sources */,
