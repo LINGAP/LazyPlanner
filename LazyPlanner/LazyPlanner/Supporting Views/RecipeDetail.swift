@@ -29,10 +29,7 @@ struct RecipeDetail: View {
                             
                         Spacer()
                         Divider()
-                       //.alignmentGuide(.leading) { d in d[.leading] }
-                         //   .frame(alignment: .leading)
-                           
-                        
+   
                         Spacer()
                             Text("\(ingredient.amount ?? 0)")
                                // .multilineTextAlignment(.trailing)
@@ -63,7 +60,7 @@ struct RecipeDetail: View {
 
 struct RecipeDetail_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeDetail(recipe: recipeData[3])
+        RecipeDetail(recipe: recipeData.recipes[3])
         
         
     }

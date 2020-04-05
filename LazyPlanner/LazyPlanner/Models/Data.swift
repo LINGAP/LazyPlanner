@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 import CoreLocation
 
-let recipeData: [Recipe] = load("RecipeData.json")
+let recipeData: MainRecipeCollection = load("apiData.json")
 
 
 func load<T: Decodable>(_ filename: String) -> T {

@@ -11,7 +11,7 @@ import SwiftUI
 struct RecipeList: View {
     var body: some View {
         NavigationView {
-            List(recipeData) { recipe in
+            List(recipeData.recipes) { recipe in
                 NavigationLink(destination: RecipeDetail(recipe: recipe)) {
                     RecipeThumbnail(recipe: recipe)
                 }

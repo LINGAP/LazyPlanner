@@ -13,7 +13,7 @@ struct MainRecipeCollection: Codable {
     var recipes: [Recipe]
 }
 
-struct Recipe: Codable, Identifiable {
+struct Recipe: Codable, Identifiable,Hashable {
     var id: Int
     var title: String
     var author:String?
@@ -27,8 +27,10 @@ struct Recipe: Codable, Identifiable {
         return instructions.split(separator: "\n").map(String.init)
     }
     
+    //private var healthScore:Nutrients.Nutrients
     
     var nutrients: Nutrients?
+    //{return healthScore.Nutrients}
     var price:Price?
     
 
@@ -61,7 +63,30 @@ struct Nutrients: Hashable, Codable {
     
     var visulBreakdown:String{"Nil"}
     
-    var healthScore: Int
+    let healthScore: Double
+}
+
+private extension Nutrients {
+    struct Nutrients: Hashable, Codable {
+        let values:[Nutrients]
+        var color: Color{
+            if(healthScore > 70){
+                return Color.Theme.nutritionA
+            }else if(healthScore > 40){
+                return Color.Theme.nutritionB
+            }else{
+                return Color.Theme.nutritionC
+            }
+        }
+        
+        var visulBreakdown:String{"Nil"}
+        
+        let healthScore: Double
+        
+        
+        
+    }
+    
 }
 
 extension Color {

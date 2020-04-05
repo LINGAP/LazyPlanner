@@ -17,9 +17,9 @@ struct RecipeCategory: Identifiable {
 }
 
 
-var nonVeggie: RecipeCategory = RecipeCategory(name: "Non-vegetarian", recipes: [recipeData[0],recipeData[2],recipeData[3],recipeData[5]])
+var nonVeggie: RecipeCategory = RecipeCategory(name: "Non-vegetarian", recipes: [recipeData.recipes[0],recipeData.recipes[2],recipeData.recipes[3],recipeData.recipes[5]])
 
-var vegetarian: RecipeCategory = RecipeCategory(name: "Vegetarian", recipes: [recipeData[1],recipeData[4],recipeData[6]])
+var vegetarian: RecipeCategory = RecipeCategory(name: "Vegetarian", recipes: [recipeData.recipes[1],recipeData.recipes[4]])
 
 //var dessert:RecipeCategory = RecipeCategory(name: "Dessert", recipes:recipeAPI.loadRecipeCategory(tags:["dessert"]) )
 

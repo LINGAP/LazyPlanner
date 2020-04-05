@@ -61,6 +61,6 @@ struct RecipeThumbnail: View {
 struct RecipeThumbnail_Previews: PreviewProvider {
     static var previews: some View {
         
-        RecipeThumbnail(recipe:recipeData[2])
+        RecipeThumbnail(recipe:recipeData.recipes[2])
     }
 }
