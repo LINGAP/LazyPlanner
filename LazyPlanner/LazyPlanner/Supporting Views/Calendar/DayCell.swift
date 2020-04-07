@@ -10,25 +10,36 @@ import SwiftUI
 
 struct DayCell: View {
     //var recipeLabels:Set<Recipe>
-    var recipeLabels:[Recipe]
+    @ObservedObject var dayCellVM = DayCellViewModel()
     @State private var editMode = EditMode.inactive
     var body: some View {
         NavigationView{
-            VStack{
-                Text("Sun")
-                List(recipeLabels,id: \.id){recipe in
-                     NavigationLink(destination: RecipeDetail(recipe: recipe)){
-                            recipeLabel(recipe: recipe)
+            VStack(alignment: .center){
+                List(dayCellVM.recipeLabelViewModels,id: \.id){recipeLabelVM in
+                    NavigationLink(destination: RecipeDetail(recipe: recipeLabelVM.recipe)){
+                        recipeLabel(recipeLabelVM: recipeLabelVM)
                         }
                 }
+                
+                Button(action: {}){
+                    HStack{
+                        Image(systemName: "plus.circle.fill")
+                            .resizable()
+                            .frame(width:20,height:20)
+                        Text("add new recipe")
+                    }
+                }
             }
-        }.border(Color.Theme.grey,width: 5)
+            .border(Color.Theme.grey,width: 5)
+            .navigationBarTitle("Sun")
+        }
+        
     }
 
 }
 
 struct DayCell_Previews: PreviewProvider {
     static var previews: some View {
-        DayCell(recipeLabels: recipeData.recipes)
+        DayCell()
     }
 }

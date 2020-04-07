@@ -20,6 +20,8 @@
 		FD1BC2A1243458F800DD9023 /* recipeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1BC2A0243458F800DD9023 /* recipeLabel.swift */; };
 		FD1BC2A3243464F400DD9023 /* apiData.json in Resources */ = {isa = PBXBuildFile; fileRef = FD1BC2A224345DD300DD9023 /* apiData.json */; };
 		FD1BC2A52434769100DD9023 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1BC2A42434769100DD9023 /* Calendar.swift */; };
+		FD1BC2A8243A56AD00DD9023 /* DayCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1BC2A7243A56AD00DD9023 /* DayCellViewModel.swift */; };
+		FD1BC2AA243A5D8B00DD9023 /* recipeLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1BC2A9243A5D8B00DD9023 /* recipeLabelViewModel.swift */; };
 		FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DA23EDEDF100A7B565 /* RecipeList.swift */; };
 		FDA939DD23F11E1300A7B565 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */; };
 		FDA939DF23F1218100A7B565 /* rice-cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939DE23F1218000A7B565 /* rice-cake.jpg */; };
@@ -69,6 +71,8 @@
 		FD1BC2A0243458F800DD9023 /* recipeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeLabel.swift; sourceTree = "<group>"; };
 		FD1BC2A224345DD300DD9023 /* apiData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = apiData.json; sourceTree = "<group>"; };
 		FD1BC2A42434769100DD9023 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		FD1BC2A7243A56AD00DD9023 /* DayCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellViewModel.swift; sourceTree = "<group>"; };
+		FD1BC2A9243A5D8B00DD9023 /* recipeLabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeLabelViewModel.swift; sourceTree = "<group>"; };
 		FDA939DA23EDEDF100A7B565 /* RecipeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		FDA939DE23F1218000A7B565 /* rice-cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rice-cake.jpg"; sourceTree = "<group>"; };
@@ -129,6 +133,15 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		FD1BC2A6243A560B00DD9023 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FD1BC2A7243A56AD00DD9023 /* DayCellViewModel.swift */,
+				FD1BC2A9243A5D8B00DD9023 /* recipeLabelViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		FDC0EED42431B1F400260F8E /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +175,7 @@
 		FDFDA76623E0AF530060C1C4 /* LazyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				FD1BC2A6243A560B00DD9023 /* ViewModels */,
 				18AF9C9124148A0B000B4A56 /* RecipeAPI.swift */,
 				18AF9C9424148AFF000B4A56 /* Controller */,
 				FDFDA79823E728700060C1C4 /* Supporting Views */,
@@ -391,6 +405,7 @@
 				1861BC2923FA53B30015EB7F /* RecipeCategory.swift in Sources */,
 				FDFDA7A223E7CAEB0060C1C4 /* RecipeThumbnail.swift in Sources */,
 				FDFDA7A623E7D2150060C1C4 /* Data.swift in Sources */,
+				FD1BC2AA243A5D8B00DD9023 /* recipeLabelViewModel.swift in Sources */,
 				FD1BC2A52434769100DD9023 /* Calendar.swift in Sources */,
 				FDC0EED62431B22C00260F8E /* DayCell.swift in Sources */,
 				FDFDA76823E0AF530060C1C4 /* AppDelegate.swift in Sources */,
@@ -398,6 +413,7 @@
 				FDFDA79E23E735300060C1C4 /* Recipe.swift in Sources */,
 				1861BAF723F19EEC0015EB7F /* RecipeScroll.swift in Sources */,
 				18AF9C9224148A0B000B4A56 /* RecipeAPI.swift in Sources */,
+				FD1BC2A8243A56AD00DD9023 /* DayCellViewModel.swift in Sources */,
 				FD1BC2A1243458F800DD9023 /* recipeLabel.swift in Sources */,
 				18B098FA2418ADC900DD5B76 /* testRun.swift in Sources */,
 				FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */,

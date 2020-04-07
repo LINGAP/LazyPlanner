@@ -9,16 +9,17 @@
 import SwiftUI
 
 struct recipeLabel: View {
-    var recipe:Recipe
+    @ObservedObject var recipeLabelVM:recipeLabelViewModel
+   
     var body: some View {
-        Text(recipe.title)
-            .background(recipe.nutrients?.color ?? Color.Theme.grey)
+        Text(recipeLabelVM.title)
+            .background(recipeLabelVM.recipe.nutrients?.color ?? Color.Theme.grey)
             .frame(maxWidth: CGFloat(70), alignment: .leading)
     }
 }
 
 struct recipeLabel_Previews: PreviewProvider {
     static var previews: some View {
-        recipeLabel(recipe: recipeData.recipes[3])
+        recipeLabel(recipeLabelVM: recipeLabelViewModel(recipe: recipeData.recipes[3]))
     }
 }

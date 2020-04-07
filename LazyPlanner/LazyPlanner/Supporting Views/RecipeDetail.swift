@@ -13,10 +13,10 @@ struct RecipeDetail: View {
     var body: some View {
         ScrollView(.vertical){
             VStack{
-//                Image(recipe.image)
-//                    .resizable()
-//                    .scaledToFill()
-                   // .edgesIgnoringSafeArea(.top)
+                Image(recipe.image ?? "")
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.top)
                     
                   //ingredients
                 Text(recipe.title)
