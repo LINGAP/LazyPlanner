@@ -11,29 +11,41 @@ import SwiftUI
 struct DayCell: View {
     //var recipeLabels:Set<Recipe>
     @ObservedObject var dayCellVM = DayCellViewModel()
-    @State private var editMode = EditMode.inactive
+    @ObservedObject var editingRecipe = recipeLabelViewModel(recipe: recipeData.recipes[0])
+    @State private var editing = false
     var body: some View {
         NavigationView{
             VStack(alignment: .center){
-                List(dayCellVM.recipeLabelViewModels,id: \.id){recipeLabelVM in
-                    NavigationLink(destination: RecipeDetail(recipe: recipeLabelVM.recipe)){
-                        recipeLabel(recipeLabelVM: recipeLabelVM)
-                        }
-                }
-                
-                Button(action: {}){
-                    HStack{
-                        Image(systemName: "plus.circle.fill")
-                            .resizable()
-                            .frame(width:20,height:20)
-                        Text("add new recipe")
+                List{
+                    ForEach(dayCellVM.recipeLabelViewModels,id: \.id){recipeLabelVM in
+                        NavigationLink(destination: RecipeDetail(recipe: recipeLabelVM.recipe)){
+                            recipeLabel(recipeLabelVM: recipeLabelVM)
+                            }
                     }
                 }
+                Button(action:onEdit){
+                    HStack{
+                        Image(systemName: self.editing ? "circle":"plus.circle.fill")
+                            .resizable()
+                            .frame(width:20,height:20)
+                        Text("edit recipe")
+                    }
+                }
+                .navigationBarTitle("Sun")
             }
             .border(Color.Theme.grey,width: 5)
-            .navigationBarTitle("Sun")
+            
         }
         
+    }
+    
+    func onEdit(){
+        if self.editing{
+            self.dayCellVM.recipeLabelViewModels.append(editingRecipe)
+            self.editing = false
+        }else{
+            self.editing = true
+        }
     }
 
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>735639778452-hhnv0blo5ab5sejo7ki6375ehee8v3v6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.735639778452-hhnv0blo5ab5sejo7ki6375ehee8v3v6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAY9Wi_1P-hGsoLHZ-AOed-CE_RbKqNn2Q</string>
+	<key>GCM_SENDER_ID</key>
+	<string>735639778452</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>sample1.LazyPlanner</string>
+	<key>PROJECT_ID</key>
+	<string>lazyplanner-3878d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lazyplanner-3878d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:735639778452:ios:4177955f3fa7d2fc697081</string>
+	<key>DATABASE_URL</key>
+	<string>https://lazyplanner-3878d.firebaseio.com</string>
+</dict>
+</plist>

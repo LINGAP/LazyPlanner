@@ -22,6 +22,7 @@
 		FD1BC2A52434769100DD9023 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1BC2A42434769100DD9023 /* Calendar.swift */; };
 		FD1BC2A8243A56AD00DD9023 /* DayCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1BC2A7243A56AD00DD9023 /* DayCellViewModel.swift */; };
 		FD1BC2AA243A5D8B00DD9023 /* recipeLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1BC2A9243A5D8B00DD9023 /* recipeLabelViewModel.swift */; };
+		FD1BC2AE243D811500DD9023 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD1BC2AD243D811500DD9023 /* GoogleService-Info.plist */; };
 		FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DA23EDEDF100A7B565 /* RecipeList.swift */; };
 		FDA939DD23F11E1300A7B565 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */; };
 		FDA939DF23F1218100A7B565 /* rice-cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939DE23F1218000A7B565 /* rice-cake.jpg */; };
@@ -73,6 +74,7 @@
 		FD1BC2A42434769100DD9023 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		FD1BC2A7243A56AD00DD9023 /* DayCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellViewModel.swift; sourceTree = "<group>"; };
 		FD1BC2A9243A5D8B00DD9023 /* recipeLabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeLabelViewModel.swift; sourceTree = "<group>"; };
+		FD1BC2AD243D811500DD9023 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDA939DA23EDEDF100A7B565 /* RecipeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		FDA939DE23F1218000A7B565 /* rice-cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rice-cake.jpg"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		FDFDA76623E0AF530060C1C4 /* LazyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				FD1BC2AD243D811500DD9023 /* GoogleService-Info.plist */,
 				FD1BC2A6243A560B00DD9023 /* ViewModels */,
 				18AF9C9124148A0B000B4A56 /* RecipeAPI.swift */,
 				18AF9C9424148AFF000B4A56 /* Controller */,
@@ -365,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD1BC2AE243D811500DD9023 /* GoogleService-Info.plist in Resources */,
 				FD1BC2A3243464F400DD9023 /* apiData.json in Resources */,
 				FDFDA77423E0AF560060C1C4 /* LaunchScreen.storyboard in Resources */,
 				1861BC2723FA51580015EB7F /* chicken-noodle-soup.jpg in Resources */,
