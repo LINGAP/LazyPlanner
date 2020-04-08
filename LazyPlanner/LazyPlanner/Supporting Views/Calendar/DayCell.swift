@@ -7,11 +7,12 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct DayCell: View {
     //var recipeLabels:Set<Recipe>
     @ObservedObject var dayCellVM = DayCellViewModel()
-    @ObservedObject var editingRecipe = recipeLabelViewModel(recipe: recipeData.recipes[0])
+    @ObservedObject var editingRecipe = recipeLabelViewModel(recipe: recipeData.recipes[1])
     @State private var editing = false
     var body: some View {
         NavigationView{
@@ -41,7 +42,25 @@ struct DayCell: View {
     
     func onEdit(){
         if self.editing{
-            self.dayCellVM.recipeLabelViewModels.append(editingRecipe)
+            let recipeRef = Firestore.firestore().document("Sun/\(editingRecipe.recipe.title)")
+            do{
+                try recipeRef.setData(editingRecipe.recipe.asDictionary())
+            }catch{
+                fatalError("Encoding recipe failed:\(error)")
+            }
+            
+            //Test Read Data:
+            Firestore.firestore().collection("Sun").getDocuments(){ (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.data())")
+                        //editingRecipe.recipe = document.data().compactMap({recipeLabelViewModel(recipe: ($0 as AnyObject).data())})
+                    }
+                    self.dayCellVM.recipeLabelViewModels.append(recipeLabelViewModel(recipe: self.editingRecipe.recipe))
+                }
+            }
             self.editing = false
         }else{
             self.editing = true

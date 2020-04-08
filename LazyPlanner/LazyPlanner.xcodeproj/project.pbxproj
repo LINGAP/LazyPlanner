@@ -13,7 +13,7 @@
 		1861BC2723FA51580015EB7F /* chicken-noodle-soup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1861BC2623FA51580015EB7F /* chicken-noodle-soup.jpg */; };
 		1861BC2923FA53B30015EB7F /* RecipeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861BC2823FA53B30015EB7F /* RecipeCategory.swift */; };
 		1861BC2B23FA55720015EB7F /* moroccan-stew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1861BC2A23FA55720015EB7F /* moroccan-stew.jpg */; };
-		18AF9C8E2414824C000B4A56 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 18AF9C8D2414824C000B4A56 /* SwiftPackageProductDependency */; };
+		18AF9C8E2414824C000B4A56 /* Siesta in Frameworks */ = {isa = PBXBuildFile; productRef = 18AF9C8D2414824C000B4A56 /* Siesta */; };
 		18AF9C9224148A0B000B4A56 /* RecipeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF9C9124148A0B000B4A56 /* RecipeAPI.swift */; };
 		18B098F82418AD6D00DD5B76 /* testData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B098F72418AD6D00DD5B76 /* testData.swift */; };
 		18B098FA2418ADC900DD5B76 /* testRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B098F92418ADC900DD5B76 /* testRun.swift */; };
@@ -117,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18AF9C8E2414824C000B4A56 /* BuildFile in Frameworks */,
+				18AF9C8E2414824C000B4A56 /* Siesta in Frameworks */,
 				B831D9229110E128E40CCB59 /* Pods_LazyPlanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,7 +170,6 @@
 				D54FC89DC08AB62A01ECC895 /* Pods-LazyPlannerTests.debug.xcconfig */,
 				5F7AC5097E4055445F92393D /* Pods-LazyPlannerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -218,7 +217,6 @@
 		FDFDA76623E0AF530060C1C4 /* LazyPlanner */ = {
 			isa = PBXGroup;
 			children = (
-				FD1BC2AD243D811500DD9023 /* GoogleService-Info.plist */,
 				FD1BC2A6243A560B00DD9023 /* ViewModels */,
 				18AF9C9124148A0B000B4A56 /* RecipeAPI.swift */,
 				18AF9C9424148AFF000B4A56 /* Controller */,
@@ -229,6 +227,7 @@
 				FDFDA76D23E0AF560060C1C4 /* Assets.xcassets */,
 				FDFDA77223E0AF560060C1C4 /* LaunchScreen.storyboard */,
 				FDFDA77523E0AF560060C1C4 /* Info.plist */,
+				FD1BC2AD243D811500DD9023 /* GoogleService-Info.plist */,
 				FDFDA79923E728980060C1C4 /* Resources */,
 				FDFDA76F23E0AF560060C1C4 /* Preview Content */,
 			);
@@ -318,7 +317,7 @@
 			);
 			name = LazyPlanner;
 			packageProductDependencies = (
-				18AF9C8D2414824C000B4A56 /* SwiftPackageProductDependency */,
+				18AF9C8D2414824C000B4A56 /* Siesta */,
 			);
 			productName = LazyPlanner;
 			productReference = FDFDA76423E0AF530060C1C4 /* LazyPlanner.app */;
@@ -396,7 +395,7 @@
 			);
 			mainGroup = FDFDA75B23E0AF530060C1C4;
 			packageReferences = (
-				18AF9C8C2414824B000B4A56 /* RemoteSwiftPackageReference */,
+				18AF9C8C2414824B000B4A56 /* XCRemoteSwiftPackageReference "siesta" */,
 			);
 			productRefGroup = FDFDA76523E0AF530060C1C4 /* Products */;
 			projectDirPath = "";
@@ -915,7 +914,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		18AF9C8C2414824B000B4A56 /* RemoteSwiftPackageReference */ = {
+		18AF9C8C2414824B000B4A56 /* XCRemoteSwiftPackageReference "siesta" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bustoutsolutions/siesta";
 			requirement = {
@@ -926,9 +925,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		18AF9C8D2414824C000B4A56 /* SwiftPackageProductDependency */ = {
+		18AF9C8D2414824C000B4A56 /* Siesta */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18AF9C8C2414824B000B4A56 /* RemoteSwiftPackageReference */;
+			package = 18AF9C8C2414824B000B4A56 /* XCRemoteSwiftPackageReference "siesta" */;
 			productName = Siesta;
 		};
 /* End XCSwiftPackageProductDependency section */
