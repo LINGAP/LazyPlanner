@@ -37,5 +37,8 @@ DerivedData/
 ### Xcode Patch ###
 **/xcshareddata/WorkspaceSettings.xcsettings
 
+##cocoaPod
+Pods/
+
 # End of https://www.gitignore.io/api/xcode
 .DS_Store
