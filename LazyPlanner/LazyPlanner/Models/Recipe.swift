@@ -18,7 +18,7 @@ struct Recipe: Codable, Identifiable,Hashable {
     var title: String
     var author:String?
     var readyInMinutes:Int
-    var image:String?
+    var image:URL
     
     var extendedIngredients:[Ingredient]
 
@@ -51,7 +51,7 @@ extension Encodable {
 
 struct Ingredient: Hashable, Codable, CustomStringConvertible {
     var id:Int
-    var aisle:String
+    var aisle:String?
     var name: String
     var amount: Double?
     var unit:String

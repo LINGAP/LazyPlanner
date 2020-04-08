@@ -26,6 +26,7 @@
 		FD1BC2A8243A56AD00DD9023 /* DayCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1BC2A7243A56AD00DD9023 /* DayCellViewModel.swift */; };
 		FD1BC2AA243A5D8B00DD9023 /* recipeLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1BC2A9243A5D8B00DD9023 /* recipeLabelViewModel.swift */; };
 		FD1BC2AE243D811500DD9023 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD1BC2AD243D811500DD9023 /* GoogleService-Info.plist */; };
+		18E0AA9324349D5A00990B7B /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 18E0AA9224349D5A00990B7B /* URLImage */; };
 		FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DA23EDEDF100A7B565 /* RecipeList.swift */; };
 		FDA939DD23F11E1300A7B565 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */; };
 		FDA939DF23F1218100A7B565 /* rice-cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939DE23F1218000A7B565 /* rice-cake.jpg */; };
@@ -119,6 +120,8 @@
 			files = (
 				18AF9C8E2414824C000B4A56 /* Siesta in Frameworks */,
 				B831D9229110E128E40CCB59 /* Pods_LazyPlanner.framework in Frameworks */,
+				18E0AA9324349D5A00990B7B /* URLImage in Frameworks */,
+				18AF9C902414824C000B4A56 /* SiestaUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +321,8 @@
 			name = LazyPlanner;
 			packageProductDependencies = (
 				18AF9C8D2414824C000B4A56 /* Siesta */,
+				18AF9C8F2414824C000B4A56 /* SiestaUI */,
+				18E0AA9224349D5A00990B7B /* URLImage */,
 			);
 			productName = LazyPlanner;
 			productReference = FDFDA76423E0AF530060C1C4 /* LazyPlanner.app */;
@@ -396,6 +401,7 @@
 			mainGroup = FDFDA75B23E0AF530060C1C4;
 			packageReferences = (
 				18AF9C8C2414824B000B4A56 /* XCRemoteSwiftPackageReference "siesta" */,
+				18E0AA9124349D5A00990B7B /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = FDFDA76523E0AF530060C1C4 /* Products */;
 			projectDirPath = "";
@@ -922,6 +928,14 @@
 				minimumVersion = 1.4.0;
 			};
 		};
+		18E0AA9124349D5A00990B7B /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.13;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -929,6 +943,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 18AF9C8C2414824B000B4A56 /* XCRemoteSwiftPackageReference "siesta" */;
 			productName = Siesta;
+		};
+		18AF9C8F2414824C000B4A56 /* SiestaUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18AF9C8C2414824B000B4A56 /* XCRemoteSwiftPackageReference "siesta" */;
+			productName = SiestaUI;
+		};
+		18E0AA9224349D5A00990B7B /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18E0AA9124349D5A00990B7B /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct RecipeThumbnail: View {
     
@@ -16,44 +17,53 @@ struct RecipeThumbnail: View {
     var tagSizeRatio: CGFloat = 0.2 //to adjust the relative position of nutrient and price tags
   
     var body: some View {
-        
         VStack{
-            Image(recipe.image ?? "")
-                .renderingMode(.original)
+            URLImage(recipe.image,processors: [ Resize(size: CGSize(width: imageWidth, height: imageHeight), scale: UIScreen.main.scale) ],
+            content:  {
+                $0.image
                 .resizable()
-                .frame(width: imageWidth,height: imageHeight)
+                .clipShape(Circle())
                 .aspectRatio(contentMode: .fill)
-               
-                //Price
-                .overlay(
-                    Group {
-                        Circle()
-                        .fill(Color.white)
-                        .frame(width: imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
-                        
-                        Text(recipe.price?.priceTag.rawValue ?? "-")
-                        .font(.callout)
-                       .offset(CGSize(width: 0, height: -28))
-                    }
-                    .position(.init(x: (1-tagSizeRatio)*imageWidth, y: (1-tagSizeRatio)*imageHeight))
-                    .offset(CGSize(width: 0, height: 15))
-            
-                )
-                
-                //Nutrition
-                .overlay(
-                    Circle()
-                        .stroke(Color.white, lineWidth: 7)
-                    .overlay(
-                        Circle()
-                            .fill(recipe.nutrients? .color ?? Color.black)
-                        )
-                    .frame(width:imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
-                    .position(.init(x: tagSizeRatio*imageWidth, y: (1-tagSizeRatio)*imageHeight))
-                )
-   
-                
+                .clipped()
+            }).frame(width: imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
         }
+        
+        
+        
+//            Image(recipe.image ?? "")
+//                .renderingMode(.original)
+//                .resizable()
+//                .frame(width: imageWidth,height: imageHeight)
+//                .aspectRatio(contentMode: .fill)
+//
+//                //Price
+//                .overlay(
+//                    Group {
+//                        Circle()
+//                        .fill(Color.white)
+//                        .frame(width: imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
+//
+//                        Text(recipe.price?.priceTag.rawValue ?? "-")
+//                        .font(.callout)
+//                       .offset(CGSize(width: 0, height: -28))
+//                    }
+//                    .position(.init(x: (1-tagSizeRatio)*imageWidth, y: (1-tagSizeRatio)*imageHeight))
+//                    .offset(CGSize(width: 0, height: 15))
+//
+//                )
+//
+//                // Nutrition
+//                .overlay(
+//                    Circle()
+//                        .stroke(Color.white, lineWidth: 7)
+//                    .overlay(
+//                        Circle()
+//                            .fill(recipe.nutrients? .color ?? Color.black)
+//                        )
+//                    .frame(width:imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
+//                    .position(.init(x: tagSizeRatio*imageWidth, y: (1-tagSizeRatio)*imageHeight))
+//                )
+
         
     }
 }
