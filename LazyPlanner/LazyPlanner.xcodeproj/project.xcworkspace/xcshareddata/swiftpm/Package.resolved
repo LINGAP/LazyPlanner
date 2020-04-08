@@ -9,6 +9,15 @@
           "revision": "0cbb11373eafc6c7d60f07e5bfac8fd6de496e33",
           "version": null
         }
+      },
+      {
+        "package": "URLImage",
+        "repositoryURL": "https://github.com/dmytro-anokhin/url-image.git",
+        "state": {
+          "branch": null,
+          "revision": "44b17289d8eb7db78eefbcf7bafa8cf2221b2a2b",
+          "version": "0.9.13"
+        }
       }
     ]
   },

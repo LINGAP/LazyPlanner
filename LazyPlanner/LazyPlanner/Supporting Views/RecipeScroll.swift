@@ -12,10 +12,9 @@ import Siesta
 struct RecipeScroll: View {
     @State var randomRecipes = [Recipe]()
     let resourceOwner = ResourceOwner()
-    var recipeResource =  recipeAPI.randomRecipes(count:5)
+    var recipeResource =  recipeAPI.randomRecipes(count:1)
     var body: some View {
-        NavigationView{
-            
+//        NavigationView{
 //            ScrollView(.vertical){
 //                ForEach(categoryList) { category in
 //                   self.padding(.bottom, 15)
@@ -35,19 +34,23 @@ struct RecipeScroll: View {
 //                        }
 //                    }
 //                }
+//            }
+//        }.onAppear(perform: loadData)
+//    }
 
                 List(randomRecipes, id: \.id){ recipe in
                     VStack(alignment: .leading) {
-                        Text(recipe.title)
-                            .font(.headline)
-                        Text(recipe.author ?? "anaymous")
-                            .font(.subheadline)
-                        
+                        RecipeThumbnail(recipe: recipe)
+//                        Text(recipe.title)
+//                            .font(.headline)
+//                        Text(recipe.author ?? "anonymous")
+//                            .font(.subheadline)
+
                     }
                 }.onAppear(perform: loadData)
  //           }
         }
-    }
+    
     
     func loadData()  {
         
