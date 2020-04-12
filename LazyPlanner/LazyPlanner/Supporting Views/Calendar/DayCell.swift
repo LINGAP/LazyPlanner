@@ -50,14 +50,17 @@ struct DayCell: View {
             }
             
             //Test Read Data:
-            Firestore.firestore().collection("Sun").getDocuments(){ (querySnapshot, err) in
+            Firestore.firestore().collection("Sun").getDocuments(){(querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
-                    for document in querySnapshot!.documents {
-                        print("\(document.data())")
-                        //editingRecipe.recipe = document.data().compactMap({recipeLabelViewModel(recipe: ($0 as AnyObject).data())})
-                    }
+//                    for document in querySnapshot!.documents {
+//                        print("_____________________\(type(of: document.data()))")
+//
+//                    }
+                    var me = querySnapshot!.documents.compactMap({Recipe(dictionary: $0.data())})
+                    print("_______________\(me)")
+                    //
                     self.dayCellVM.recipeLabelViewModels.append(recipeLabelViewModel(recipe: self.editingRecipe.recipe))
                 }
             }
