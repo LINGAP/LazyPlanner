@@ -17,6 +17,7 @@
 		18AF9C9224148A0B000B4A56 /* RecipeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF9C9124148A0B000B4A56 /* RecipeAPI.swift */; };
 		18B098F82418AD6D00DD5B76 /* testData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B098F72418AD6D00DD5B76 /* testData.swift */; };
 		18B098FA2418ADC900DD5B76 /* testRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B098F92418ADC900DD5B76 /* testRun.swift */; };
+		18E0AA9324349D5A00990B7B /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 18E0AA9224349D5A00990B7B /* URLImage */; };
 		456510D6DD985864A9AA04D1 /* Pods_LazyPlannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36252594927EA7A9BFD9F65E /* Pods_LazyPlannerTests.framework */; };
 		B831D9229110E128E40CCB59 /* Pods_LazyPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5537947D8A6CFD5AB4394480 /* Pods_LazyPlanner.framework */; };
 		BF82A8945C28C37ECD687604 /* Pods_LazyPlanner_LazyPlannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7AA1B0EE4477AEF10E7622 /* Pods_LazyPlanner_LazyPlannerUITests.framework */; };
@@ -26,7 +27,6 @@
 		FD1BC2A8243A56AD00DD9023 /* DayCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1BC2A7243A56AD00DD9023 /* DayCellViewModel.swift */; };
 		FD1BC2AA243A5D8B00DD9023 /* recipeLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1BC2A9243A5D8B00DD9023 /* recipeLabelViewModel.swift */; };
 		FD1BC2AE243D811500DD9023 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD1BC2AD243D811500DD9023 /* GoogleService-Info.plist */; };
-		18E0AA9324349D5A00990B7B /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 18E0AA9224349D5A00990B7B /* URLImage */; };
 		FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DA23EDEDF100A7B565 /* RecipeList.swift */; };
 		FDA939DD23F11E1300A7B565 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */; };
 		FDA939DF23F1218100A7B565 /* rice-cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939DE23F1218000A7B565 /* rice-cake.jpg */; };
@@ -121,7 +121,6 @@
 				18AF9C8E2414824C000B4A56 /* Siesta in Frameworks */,
 				B831D9229110E128E40CCB59 /* Pods_LazyPlanner.framework in Frameworks */,
 				18E0AA9324349D5A00990B7B /* URLImage in Frameworks */,
-				18AF9C902414824C000B4A56 /* SiestaUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +320,6 @@
 			name = LazyPlanner;
 			packageProductDependencies = (
 				18AF9C8D2414824C000B4A56 /* Siesta */,
-				18AF9C8F2414824C000B4A56 /* SiestaUI */,
 				18E0AA9224349D5A00990B7B /* URLImage */,
 			);
 			productName = LazyPlanner;
@@ -943,11 +941,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 18AF9C8C2414824B000B4A56 /* XCRemoteSwiftPackageReference "siesta" */;
 			productName = Siesta;
-		};
-		18AF9C8F2414824C000B4A56 /* SiestaUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 18AF9C8C2414824B000B4A56 /* XCRemoteSwiftPackageReference "siesta" */;
-			productName = SiestaUI;
 		};
 		18E0AA9224349D5A00990B7B /* URLImage */ = {
 			isa = XCSwiftPackageProductDependency;

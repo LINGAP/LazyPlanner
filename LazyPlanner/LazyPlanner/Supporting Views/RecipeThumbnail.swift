@@ -12,8 +12,8 @@ import URLImage
 struct RecipeThumbnail: View {
     
     var recipe: Recipe
-    var imageWidth: CGFloat = 140
-    var imageHeight: CGFloat = 120
+    var imageWidth: CGFloat = 1400
+    var imageHeight: CGFloat = 1200
     var tagSizeRatio: CGFloat = 0.2 //to adjust the relative position of nutrient and price tags
   
     var body: some View {

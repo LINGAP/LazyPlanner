@@ -17,7 +17,7 @@
         "price":{
             "totalPrice":4.67
         },
-        "imageName":"https://spoonacular.com/recipeImages/641958-556x370.jpg"
+        "imageName":"seafood-risotto"
 
     },
        {   "id":2,
@@ -39,7 +39,7 @@
            "price":{
                "totalPrice":3.61
            },
-           "imageName":"https://spoonacular.com/recipeImages/1340685-556x370.jpg"
+           "imageName":"rice-cake"
 
        },
        {   "id":3,
@@ -60,7 +60,7 @@
               "price":{
                   "totalPrice":5.51
               },
-              "imageName":"https://spoonacular.com/recipeImages/661653-556x370.jpg"
+              "imageName":"Spaghetti-Bolognese"
           },
        {   "id":4,
               "name":"Baked Cod",
@@ -82,7 +82,7 @@
               "price":{
                   "totalPrice":7.25
               },
-              "imageName":"https://spoonacular.com/recipeImages/652240-556x370.jpg"
+              "imageName":"baked-cod"
 
           },
        {   "id":5,
@@ -104,7 +104,7 @@
               "price":{
                   "totalPrice":3.25
               },
-              "imageName":"https://spoonacular.com/recipeImages/1288571-556x370.jpg"
+              "imageName":"avocado-toast"
 
           },
        {   "id":6,
