@@ -10,10 +10,18 @@ import SwiftUI
 import Firebase
 
 struct DayCell: View {
+    
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .font : UIFont(name:"HelveticaNeue", size: 20)!]
+        UINavigationBar.appearance().backgroundColor = .lightGray
+    }
+    
     //var recipeLabels:Set<Recipe>
-    @ObservedObject var dayCellVM = DayCellViewModel()
+    @ObservedObject var dayCellVM = DayCellViewModel(date: "21")
     @ObservedObject var editingRecipe = recipeLabelViewModel(recipe: recipeData.recipes[1])
     @State private var editing = false
+    
     var body: some View {
         NavigationView{
             VStack(alignment: .center){
@@ -32,11 +40,12 @@ struct DayCell: View {
                         Text("edit recipe")
                     }
                 }
-                .navigationBarTitle("Sun")
+                .navigationBarTitle(dayCellVM.date)
+    
             }
             .border(Color.Theme.grey,width: 5)
-            
         }
+        //.frame(width:CGFloat(100))
         
     }
     
@@ -54,14 +63,10 @@ struct DayCell: View {
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
-//                    for document in querySnapshot!.documents {
-//                        print("_____________________\(type(of: document.data()))")
-//
-//                    }
-                    var me = querySnapshot!.documents.compactMap({Recipe(dictionary: $0.data())})
-                    print("_______________\(me)")
-                    //
-                    self.dayCellVM.recipeLabelViewModels.append(recipeLabelViewModel(recipe: self.editingRecipe.recipe))
+                    let newRecipe = querySnapshot!.documents.compactMap({Recipe(dictionary: $0.data())})
+                    let newRecipeVM = recipeLabelViewModel(recipe: newRecipe[0])
+                    
+                    self.dayCellVM.recipeLabelViewModels.append(newRecipeVM)
                 }
             }
             self.editing = false
