@@ -19,7 +19,7 @@ struct MyCalendar: View {
                 ForEach(0..<weekVM.dayCellViewModels.count){ i in
                     VStack{
                         Text("\(i+1)")
-                        DayCell().frame(width: CGFloat(50), height: CGFloat(300))
+                        DayCell(dayCellVM: self.weekVM.dayCellViewModels[i]).frame(width: CGFloat(50), height: CGFloat(300))
                     }
                 }
             }

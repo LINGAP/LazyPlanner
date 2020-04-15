@@ -12,11 +12,11 @@ import Combine
 class WeekViewModel: ObservableObject {
     @Published var dayCellViewModels = [DayCellViewModel]()
     private var daysOfWeek = 7
-    var Mon = Date().previous(.monday)
-    var Sun = Date().next(.sunday)
+    var curDate = Date().previous(.monday,considerToday: true)
     let formatter = DateFormatter()
     
     private var cancellables = Set<AnyCancellable>()
+    
     init() {
         var calendar = Calendar(identifier: .gregorian)
         calendar.locale = Locale(identifier: "en_US_POSIX")
@@ -25,12 +25,9 @@ class WeekViewModel: ObservableObject {
         formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "dd"
         
-        var curDate = Mon
         for day in 1...daysOfWeek {
-            let date = formatter.string(from: curDate)
-    print("___________________________\(date)")
+            let date = formatter.string(from: curDate.next(numberOfDays: day-1))
             self.dayCellViewModels.append(DayCellViewModel(date: date))
-
         }
     }
     
@@ -48,6 +45,12 @@ extension Date {
                weekday,
                considerToday: considerToday)
   }
+    
+    func next(numberOfDays:Int) -> Date {
+        let calendar = Calendar(identifier: .gregorian)
+        _ = DateComponents()
+        return calendar.date(byAdding: .day, value: numberOfDays, to: self)!
+    }
 
   func previous(_ weekday: Weekday, considerToday: Bool = false) -> Date {
     return get(.previous,

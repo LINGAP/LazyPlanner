@@ -14,7 +14,7 @@ struct recipeLabel: View {
     var body: some View {
         Text(recipeLabelVM.title)
             .background(recipeLabelVM.recipe.nutrients?.color ?? Color.Theme.grey)
-            //.frame(maxWidth: CGFloat(70), alignment: .leading)
+            .frame(maxWidth: CGFloat(400), alignment: .leading)
     }
 }
 

@@ -10,16 +10,18 @@ import SwiftUI
 import Firebase
 
 struct DayCell: View {
-    
-    init() {
+    var dayCellVM:DayCellViewModel
+    init(dayCellVM:DayCellViewModel) {
         UINavigationBar.appearance().largeTitleTextAttributes = [
             .font : UIFont(name:"HelveticaNeue", size: 20)!]
         UINavigationBar.appearance().backgroundColor = .lightGray
+        self.dayCellVM = dayCellVM
     }
     
     //var recipeLabels:Set<Recipe>
-    @ObservedObject var dayCellVM = DayCellViewModel(date: "21")
-    @ObservedObject var editingRecipe = recipeLabelViewModel(recipe: recipeData.recipes[1])
+    //@ObservedObject
+    
+    @State var editingRecipe = recipeLabelViewModel(recipe: recipeData.recipes[1])
     @State private var editing = false
     
     var body: some View {
@@ -29,7 +31,7 @@ struct DayCell: View {
                     ForEach(dayCellVM.recipeLabelViewModels,id: \.id){recipeLabelVM in
                         NavigationLink(destination: RecipeDetail(recipe: recipeLabelVM.recipe)){
                             recipeLabel(recipeLabelVM: recipeLabelVM)
-                            }
+                        }
                     }
                 }
                 Button(action:onEdit){
@@ -79,6 +81,6 @@ struct DayCell: View {
 
 struct DayCell_Previews: PreviewProvider {
     static var previews: some View {
-        DayCell()
+        DayCell(dayCellVM:DayCellViewModel(date:"20"))
     }
 }
