@@ -62,7 +62,7 @@ extension Decodable {
 
 
 struct Ingredient: Hashable, Codable, CustomStringConvertible {
-    var id:Int
+    var id:Int?
     var aisle:String?
     var name: String
     var amount: Double?
