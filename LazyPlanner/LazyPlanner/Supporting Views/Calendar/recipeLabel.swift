@@ -13,8 +13,10 @@ struct recipeLabel: View {
    
     var body: some View {
         Text(recipeLabelVM.title)
+        .font(.system(size: 23, weight: .light, design: .serif))
+            .multilineTextAlignment(.leading)
             .background(recipeLabelVM.recipe.nutrients?.color ?? Color.Theme.grey)
-            .frame(maxWidth: CGFloat(400), alignment: .leading)
+         .frame( alignment: .leading)
     }
 }
 

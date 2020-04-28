@@ -33,6 +33,7 @@
 		FDA939E123F1A99200A7B565 /* Spaghetti-Bolognese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939E023F1A99200A7B565 /* Spaghetti-Bolognese.jpg */; };
 		FDC0EED62431B22C00260F8E /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0EED52431B22C00260F8E /* DayCell.swift */; };
 		FDE8A7AE24461F870058B4CE /* WeekViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE8A7AD24461F870058B4CE /* WeekViewModel.swift */; };
+		FDE8A7B0244FDB450058B4CE /* HomeMainContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE8A7AF244FDB440058B4CE /* HomeMainContent.swift */; };
 		FDFDA76823E0AF530060C1C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */; };
 		FDFDA76A23E0AF530060C1C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFDA76923E0AF530060C1C4 /* SceneDelegate.swift */; };
 		FDFDA76E23E0AF560060C1C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFDA76D23E0AF560060C1C4 /* Assets.xcassets */; };
@@ -95,6 +96,7 @@
 		FDA939E023F1A99200A7B565 /* Spaghetti-Bolognese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Spaghetti-Bolognese.jpg"; sourceTree = "<group>"; };
 		FDC0EED52431B22C00260F8E /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		FDE8A7AD24461F870058B4CE /* WeekViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewModel.swift; sourceTree = "<group>"; };
+		FDE8A7AF244FDB440058B4CE /* HomeMainContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainContent.swift; sourceTree = "<group>"; };
 		FDFDA76423E0AF530060C1C4 /* LazyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDFDA76923E0AF530060C1C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				1861BAF623F19EEC0015EB7F /* RecipeScroll.swift */,
 				FDFDA7A123E7CAEB0060C1C4 /* RecipeThumbnail.swift */,
 				FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */,
+				FDE8A7AF244FDB440058B4CE /* HomeMainContent.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				FD1BC2A52434769100DD9023 /* MyCalendar.swift in Sources */,
 				FDC0EED62431B22C00260F8E /* DayCell.swift in Sources */,
 				FDFDA76823E0AF530060C1C4 /* AppDelegate.swift in Sources */,
+				FDE8A7B0244FDB450058B4CE /* HomeMainContent.swift in Sources */,
 				FDFDA76A23E0AF530060C1C4 /* SceneDelegate.swift in Sources */,
 				FDFDA79E23E735300060C1C4 /* Recipe.swift in Sources */,
 				1861BAF723F19EEC0015EB7F /* RecipeScroll.swift in Sources */,

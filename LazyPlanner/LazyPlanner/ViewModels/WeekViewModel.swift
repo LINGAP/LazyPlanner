@@ -27,7 +27,7 @@ class WeekViewModel: ObservableObject {
         
         for day in 1...daysOfWeek {
             let date = formatter.string(from: curDate.next(numberOfDays: day-1))
-            self.dayCellViewModels.append(DayCellViewModel(date: date))
+            self.dayCellViewModels.append(DayCellViewModel(date: date,day: day))
         }
     }
     

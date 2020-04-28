@@ -10,30 +10,38 @@ import SwiftUI
 import Firebase
 
 struct DayCell: View {
-    var dayCellVM:DayCellViewModel
-    init(dayCellVM:DayCellViewModel) {
-        UINavigationBar.appearance().largeTitleTextAttributes = [
-            .font : UIFont(name:"HelveticaNeue", size: 20)!]
+    @ObservedObject var dayCellVM:DayCellViewModel
+    
+    init(dayCellVM:DayCellViewModel,onSelectedRecipe:@escaping (Recipe)->Void) {
         UINavigationBar.appearance().backgroundColor = .lightGray
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .font : UIFont(name:"Papyrus", size: 20)!]
+        UINavigationBar.appearance().titleTextAttributes = [
+            .font : UIFont(name: "HelveticaNeue-Thin", size: 20)!]
         self.dayCellVM = dayCellVM
+        self.onSelectedRecipe = onSelectedRecipe
     }
     
     //var recipeLabels:Set<Recipe>
-    //@ObservedObject
-    
-    @State var editingRecipe = recipeLabelViewModel(recipe: recipeData.recipes[1])
+    @State var draggedRecipeVM:recipeLabelViewModel?
+    let onSelectedRecipe:(Recipe) -> Void
+    @State var editingRecipe = recipeLabelViewModel(recipe: recipeData.recipes[2])
     @State private var editing = false
+    @GestureState var tap = false
     
     var body: some View {
-        NavigationView{
-            VStack(alignment: .center){
-                List{
+       // NavigationView{
+            ScrollView(.vertical){
+            VStack(alignment: .leading){
                     ForEach(dayCellVM.recipeLabelViewModels,id: \.id){recipeLabelVM in
-                        NavigationLink(destination: RecipeDetail(recipe: recipeLabelVM.recipe)){
-                            recipeLabel(recipeLabelVM: recipeLabelVM)
+//                        NavigationLink(destination: RecipeDetail(recipe: recipeLabelVM.recipe)){
+                        recipeLabel(recipeLabelVM: recipeLabelVM).onTapGesture {
+                            self.onSelectedRecipe(recipeLabelVM.recipe)
                         }
+                       // }.foregroundColor(Color.black)
                     }
                 }
+            .onAppear(perform: dayCellVM.loadDayRecipe)
                 Button(action:onEdit){
                     HStack{
                         Image(systemName: self.editing ? "circle":"plus.circle.fill")
@@ -42,34 +50,19 @@ struct DayCell: View {
                         Text("edit recipe")
                     }
                 }
-                .navigationBarTitle(dayCellVM.date)
-    
-            }
-            .border(Color.Theme.grey,width: 5)
+          //  } .navigationBarTitle(dayCellVM.date)
+            
         }
         //.frame(width:CGFloat(100))
-        
     }
     
     func onEdit(){
         if self.editing{
-            let recipeRef = Firestore.firestore().document("Sun/\(editingRecipe.recipe.title)")
+            let recipeRef = Firestore.firestore().document("6/\(editingRecipe.recipe.title)")
             do{
                 try recipeRef.setData(editingRecipe.recipe.asDictionary())
             }catch{
                 fatalError("Encoding recipe failed:\(error)")
-            }
-            
-            //Test Read Data:
-            Firestore.firestore().collection("Sun").getDocuments(){(querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    let newRecipe = querySnapshot!.documents.compactMap({Recipe(dictionary: $0.data())})
-                    let newRecipeVM = recipeLabelViewModel(recipe: newRecipe[0])
-                    
-                    self.dayCellVM.recipeLabelViewModels.append(newRecipeVM)
-                }
             }
             self.editing = false
         }else{
@@ -81,6 +74,6 @@ struct DayCell: View {
 
 struct DayCell_Previews: PreviewProvider {
     static var previews: some View {
-        DayCell(dayCellVM:DayCellViewModel(date:"20"))
+        DayCell(dayCellVM:DayCellViewModel(date:"20", day: 6),onSelectedRecipe: {_ in})
     }
 }
