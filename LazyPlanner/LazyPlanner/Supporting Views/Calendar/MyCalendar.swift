@@ -14,14 +14,15 @@ struct MyCalendar: View {
     @ObservedObject var weekVM = WeekViewModel()
     
     @State var draggedRecipeVM:recipeLabelViewModel?
-    let onSelectedRecipe:(Recipe) -> Void
+
     var body: some View {
         VStack{
             HStack(spacing: 0){
                 ForEach(0..<weekVM.dayCellViewModels.count){ i in
                     VStack{
                         Text("\(i+1)")
-                        DayCell(dayCellVM: self.weekVM.dayCellViewModels[i],onSelectedRecipe: self.onSelectedRecipe)
+                        //,onSelectedRecipe: self.onSelectedRecipe
+                        DayCell(dayCellVM: self.weekVM.dayCellViewModels[i])
                             .frame(width: CGFloat(50), height: CGFloat(300))
                             
                     }
@@ -35,7 +36,7 @@ struct MyCalendar: View {
 
 struct MyCalendar_Previews: PreviewProvider {
     static var previews: some View {
-        MyCalendar(onSelectedRecipe: {_ in})
+        MyCalendar()
     }
 }
 

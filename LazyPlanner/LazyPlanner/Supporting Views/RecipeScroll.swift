@@ -12,14 +12,18 @@ import Siesta
 struct RecipeScroll: View {
     @State var randomRecipes = [Recipe]()
     let resourceOwner = ResourceOwner()
+    @EnvironmentObject var pushViewData:PushViewData
     var recipeResource =  recipeAPI.randomRecipes(count:5)
     var body: some View {
         NavigationView{
             List(randomRecipes, id: \.id){ recipe in
                 VStack(alignment: .leading) {
-                    NavigationLink(destination: RecipeDetail(recipe: recipe)){
-                        RecipeThumbnail(recipe: recipe)
+                    
+                    RecipeThumbnail(recipe: recipe).onTapGesture {
+                       self.pushViewData.selectedRecipe=recipe
+                       self.pushViewData.pushed=true
                     }
+                  
                 }
             }.onAppear(perform: loadData)
         }
@@ -80,13 +84,6 @@ struct RecipeScroll: View {
             }
         }
 
-        
-        //TODO:new Data
-//        if(keep scrolling down){
-//            refresh()
-//        }
-        
-        
         //Load if Needed
         recipeResource.loadIfNeeded()
         

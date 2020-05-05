@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let pushViewData = PushViewData()
         // Create the SwiftUI view that provides the window contents.
-        let contentView = HomeMainContent(onSelectedRecipe: {_ in}).environmentObject(pushViewData)
+        let contentView = HomeMainContent().environmentObject(pushViewData)
 
                         //RecipeThumbnail(recipe: recipeData.recipes[0])
 
