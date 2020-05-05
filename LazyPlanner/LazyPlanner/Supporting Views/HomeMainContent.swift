@@ -17,24 +17,11 @@ struct HomeMainContent: View {
     @State private var draggedToCalendar:Bool = false
     var body: some View {
         VStack{
-            if self.selectedRecipe==nil {
-                VStack{
-                    MyCalendar(draggedRecipeVM:self.draggedRecipeVM,onSelectedRecipe: {selected in self.selectedRecipe = selected
-                    })
-                    
-                    ForEach(samples){vm in recipeLabel(recipeLabelVM: vm)
-                        .gesture(DragGesture()
-                            .onChanged{value in print("dragged")}
-                            .onEnded{value in
-                                self.draggedRecipeVM = vm
-                        })}
-                }
-            }else{
-                RecipeDetail(recipe: self.selectedRecipe!)
-            }
-       
+            MyCalendar(draggedRecipeVM:self.draggedRecipeVM,onSelectedRecipe: {selected in
+                self.selectedRecipe = selected
+            })
+            RecipeScroll()
         }
-        
     }
 }
 
