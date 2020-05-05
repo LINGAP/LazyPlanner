@@ -10,6 +10,7 @@ import SwiftUI
 
 struct RecipeDetail: View {
     var recipe:Recipe
+    @EnvironmentObject var pushViewData:PushViewData
     var body: some View {
         ScrollView(.vertical){
             VStack{
@@ -53,6 +54,10 @@ struct RecipeDetail: View {
                 }
                 
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: MyBackButton(label: "Back!") {
+                self.pushViewData.pushed = false
+            })
         }
         .edgesIgnoringSafeArea(.top)
     }
@@ -61,7 +66,20 @@ struct RecipeDetail: View {
 struct RecipeDetail_Previews: PreviewProvider {
     static var previews: some View {
         RecipeDetail(recipe: recipeData.recipes[3])
-        
-        
+
+    }
+}
+
+struct MyBackButton: View {
+    let label: String
+    let closure: () -> ()
+
+    var body: some View {
+        Button(action: { self.closure() }) {
+            HStack {
+                Image(systemName: "chevron.left")
+                Text(label)
+            }
+        }
     }
 }

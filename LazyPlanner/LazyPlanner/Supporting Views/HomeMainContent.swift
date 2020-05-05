@@ -14,21 +14,28 @@ struct HomeMainContent: View {
     @State var draggedRecipeVM:recipeLabelViewModel?
     let onSelectedRecipe:(Recipe) -> Void
     @State var selectedRecipe:Recipe?
+    @State var showDetail = false
+    @EnvironmentObject var pushViewData:PushViewData
     @State private var draggedToCalendar:Bool = false
     var body: some View {
-        VStack{
-            MyCalendar(draggedRecipeVM:self.draggedRecipeVM,onSelectedRecipe: {selected in
-                self.selectedRecipe = selected
-            })
-            RecipeScroll()
+        NavigationView{
+            VStack{
+                MyCalendar(draggedRecipeVM:self.draggedRecipeVM,onSelectedRecipe: {selected in
+                    self.selectedRecipe = selected
+                    self.pushViewData.pushed=true
+                })
+                RecipeScroll()
+                
+                NavigationLink(destination: RecipeDetail(recipe:selectedRecipe ?? samples[0].recipe), isActive: self.$pushViewData.pushed,label: {EmptyView()})
+            
+            }
+        
         }
     }
 }
 
-
 struct HomeMainContent_Previews: PreviewProvider {
     static var previews: some View {
-        HomeMainContent(onSelectedRecipe: {_ in})
-        
+        HomeMainContent(onSelectedRecipe: {_ in}).environmentObject(PushViewData())
     }
 }

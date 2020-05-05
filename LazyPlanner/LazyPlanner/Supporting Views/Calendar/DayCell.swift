@@ -13,11 +13,11 @@ struct DayCell: View {
     @ObservedObject var dayCellVM:DayCellViewModel
     
     init(dayCellVM:DayCellViewModel,onSelectedRecipe:@escaping (Recipe)->Void) {
-        UINavigationBar.appearance().backgroundColor = .lightGray
-        UINavigationBar.appearance().largeTitleTextAttributes = [
-            .font : UIFont(name:"Papyrus", size: 20)!]
-        UINavigationBar.appearance().titleTextAttributes = [
-            .font : UIFont(name: "HelveticaNeue-Thin", size: 20)!]
+//        UINavigationBar.appearance().backgroundColor = .lightGray
+//        UINavigationBar.appearance().largeTitleTextAttributes = [
+//            .font : UIFont(name:"Papyrus", size: 20)!]
+//        UINavigationBar.appearance().titleTextAttributes = [
+//            .font : UIFont(name: "HelveticaNeue-Thin", size: 20)!]
         self.dayCellVM = dayCellVM
         self.onSelectedRecipe = onSelectedRecipe
     }
@@ -34,11 +34,12 @@ struct DayCell: View {
             ScrollView(.vertical){
             VStack(alignment: .leading){
                     ForEach(dayCellVM.recipeLabelViewModels,id: \.id){recipeLabelVM in
-//                        NavigationLink(destination: RecipeDetail(recipe: recipeLabelVM.recipe)){
-                        recipeLabel(recipeLabelVM: recipeLabelVM).onTapGesture {
+                        //NavigationLink(destination: RecipeDetail(recipe: recipeLabelVM.recipe)){
+                        recipeLabel(recipeLabelVM: recipeLabelVM)
+                            .onTapGesture {
                             self.onSelectedRecipe(recipeLabelVM.recipe)
                         }
-                       // }.foregroundColor(Color.black)
+                     // }.foregroundColor(Color.black)
                     }
                 }
             .onAppear(perform: dayCellVM.loadDayRecipe)
