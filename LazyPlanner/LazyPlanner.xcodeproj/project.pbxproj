@@ -28,6 +28,7 @@
 		FD1BC2AA243A5D8B00DD9023 /* recipeLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1BC2A9243A5D8B00DD9023 /* recipeLabelViewModel.swift */; };
 		FD1BC2AE243D811500DD9023 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD1BC2AD243D811500DD9023 /* GoogleService-Info.plist */; };
 		FD6EACA8246144F500D51885 /* PushViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6EACA7246144F500D51885 /* PushViewData.swift */; };
+		FD6EACAA2462710A00D51885 /* DragRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6EACA92462710A00D51885 /* DragRecipe.swift */; };
 		FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DA23EDEDF100A7B565 /* RecipeList.swift */; };
 		FDA939DD23F11E1300A7B565 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */; };
 		FDA939DF23F1218100A7B565 /* rice-cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDA939DE23F1218000A7B565 /* rice-cake.jpg */; };
@@ -91,6 +92,7 @@
 		FD1BC2A9243A5D8B00DD9023 /* recipeLabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeLabelViewModel.swift; sourceTree = "<group>"; };
 		FD1BC2AD243D811500DD9023 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FD6EACA7246144F500D51885 /* PushViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushViewData.swift; sourceTree = "<group>"; };
+		FD6EACA92462710A00D51885 /* DragRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragRecipe.swift; sourceTree = "<group>"; };
 		FDA939DA23EDEDF100A7B565 /* RecipeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		FDA939DC23F11E1300A7B565 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		FDA939DE23F1218000A7B565 /* rice-cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rice-cake.jpg"; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			children = (
 				FDFDA79D23E735300060C1C4 /* Recipe.swift */,
 				FDFDA7A523E7D2150060C1C4 /* Data.swift */,
+				FD6EACA92462710A00D51885 /* DragRecipe.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				FDFDA79E23E735300060C1C4 /* Recipe.swift in Sources */,
 				1861BAF723F19EEC0015EB7F /* RecipeScroll.swift in Sources */,
 				18AF9C9224148A0B000B4A56 /* RecipeAPI.swift in Sources */,
+				FD6EACAA2462710A00D51885 /* DragRecipe.swift in Sources */,
 				FDE8A7AE24461F870058B4CE /* WeekViewModel.swift in Sources */,
 				FD1BC2A8243A56AD00DD9023 /* DayCellViewModel.swift in Sources */,
 				FD1BC2A1243458F800DD9023 /* recipeLabel.swift in Sources */,

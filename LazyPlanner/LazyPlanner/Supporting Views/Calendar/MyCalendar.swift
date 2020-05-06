@@ -21,12 +21,11 @@ struct MyCalendar: View {
                 ForEach(0..<weekVM.dayCellViewModels.count){ i in
                     VStack{
                         Text("\(i+1)")
-                        //,onSelectedRecipe: self.onSelectedRecipe
                         DayCell(dayCellVM: self.weekVM.dayCellViewModels[i])
                             .frame(width: CGFloat(50), height: CGFloat(300))
                             
                     }
-                    .border(Color.Theme.grey,width: 3)
+                    .border(Color.Theme.grey,width: 1)
                     
                 }
             }

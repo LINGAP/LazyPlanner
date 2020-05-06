@@ -12,86 +12,66 @@ import URLImage
 struct RecipeThumbnail: View {
     
     var recipe: Recipe
-
+    @State var dragAmount = CGSize.zero
     var imageWidth: CGFloat = 180
     var imageHeight: CGFloat = 180
     var tagSizeRatio: CGFloat = 0.35 //to adjust the relative position of nutrient and price tags
 
   
     var body: some View {
-        VStack{
-            URLImage(recipe.image,processors: [ Resize(size: CGSize(width: imageWidth, height: imageHeight), scale: UIScreen.main.scale) ],
-            content:  {
-                $0.image
-                .resizable()
-                    .clipShape(RoundedRectangle(cornerRadius: 50, style: .circular))
-                .aspectRatio(contentMode: .fill)
-                .clipped()
-            })
-             .overlay(
-                Group {
-                    Circle()
-                    .fill(Color.white)
-                    .frame(width: imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
-
-                    Text(recipe.price?.priceTag.rawValue ?? "-")
-                    .font(.callout)
-                    .offset(CGSize(width: 0, height: -28))
-                }
-                .position(.init(x: 55, y: 285))
-                .offset(CGSize(width: 0, height: 15))
-
+        if #available(iOS 13.4, *) {
+            return AnyView(
+            VStack{
+                URLImage(recipe.image,processors: [ Resize(size: CGSize(width: imageWidth, height: imageHeight), scale: UIScreen.main.scale) ],
+                         content:  {
+                            $0.image
+                                .resizable()
+                                .clipShape(RoundedRectangle(cornerRadius: 50, style: .circular))
+                                .aspectRatio(contentMode: .fill)
+                                .clipped()
+                })
+                    .overlay(
+                        Group {
+                            Circle()
+                                .fill(Color.white)
+                                .frame(width: imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
+                            
+                            Text(recipe.price?.priceTag.rawValue ?? "-")
+                                .font(.callout)
+                                .offset(CGSize(width: 0, height: -28))
+                        }
+                        .position(.init(x: 55, y: 285))
+                        .offset(CGSize(width: 0, height: 15))
+                        
+                )
+                    
+                    //             Nutrition
+                    .overlay(
+                        Circle()
+                            .stroke(Color.white, lineWidth: 7)
+                            .overlay(
+                                Circle()
+                                    .fill(recipe.nutrients? .color ?? Color.black)
+                        )
+                            .frame(width:imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
+                            .position(.init(x: 275, y: 285))
+                )
+            }.offset(dragAmount)
+                .zIndex(self.dragAmount == .zero ? 0 : 1)
+               .gesture(DragGesture()
+                    .onChanged{ value in
+                        self.dragAmount = CGSize(width: value.translation.width, height: value.translation.height)
+                    }
+               .onEnded(<#T##action: (DragGesture.Value) -> Void##(DragGesture.Value) -> Void#>)
             )
-
-//             Nutrition
-            .overlay(
-                Circle()
-                    .stroke(Color.white, lineWidth: 7)
-                .overlay(
-                    Circle()
-                        .fill(recipe.nutrients? .color ?? Color.black)
-                    )
-                .frame(width:imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
-                .position(.init(x: 275, y: 285))
-            )
+//            .onDrag {
+//                return NSItemProvider(object: DragRecipeData(recipe: self.recipe))
+//            }
+        )}else {
+            // Fallback on earlier versions
+              print("<13.4")
+              return AnyView(self)
         }
-        
-        
-//            Image(recipe.image ?? "")
-//                .renderingMode(.original)
-//                .resizable()
-//                .frame(width: imageWidth,height: imageHeight)
-//                .aspectRatio(contentMode: .fill)
-//
-//                //Price
-//                .overlay(
-//                    Group {
-//                        Circle()
-//                        .fill(Color.white)
-//                        .frame(width: imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
-//
-//                        Text(recipe.price?.priceTag.rawValue ?? "-")
-//                        .font(.callout)
-//                       .offset(CGSize(width: 0, height: -28))
-//                    }
-//                    .position(.init(x: (1-tagSizeRatio)*imageWidth, y: (1-tagSizeRatio)*imageHeight))
-//                    .offset(CGSize(width: 0, height: 15))
-//
-//                )
-//
-//                // Nutrition
-//                .overlay(
-//                    Circle()
-//                        .stroke(Color.white, lineWidth: 7)
-//                    .overlay(
-//                        Circle()
-//                            .fill(recipe.nutrients? .color ?? Color.black)
-//                        )
-//                    .frame(width:imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
-//                    .position(.init(x: tagSizeRatio*imageWidth, y: (1-tagSizeRatio)*imageHeight))
-//                )
-
-        
     }
 }
 
