@@ -12,19 +12,20 @@ import Firebase
 struct DayCell: View {
     @ObservedObject var dayCellVM:DayCellViewModel
     
-    init(dayCellVM:DayCellViewModel,onSelectedRecipe:@escaping (Recipe)->Void) {
-        UINavigationBar.appearance().backgroundColor = .lightGray
-        UINavigationBar.appearance().largeTitleTextAttributes = [
-            .font : UIFont(name:"Papyrus", size: 20)!]
-        UINavigationBar.appearance().titleTextAttributes = [
-            .font : UIFont(name: "HelveticaNeue-Thin", size: 20)!]
-        self.dayCellVM = dayCellVM
-        self.onSelectedRecipe = onSelectedRecipe
-    }
+//    init(dayCellVM:DayCellViewModel,onSelectedRecipe:@escaping (Recipe)->Void) {
+//        UINavigationBar.appearance().backgroundColor = .lightGray
+//        UINavigationBar.appearance().largeTitleTextAttributes = [
+//            .font : UIFont(name:"Papyrus", size: 20)!]
+//        UINavigationBar.appearance().titleTextAttributes = [
+//            .font : UIFont(name: "HelveticaNeue-Thin", size: 20)!]
+//        self.dayCellVM = dayCellVM
+//        self.onSelectedRecipe = onSelectedRecipe
+//    }
     
-    //var recipeLabels:Set<Recipe>
+
+    @EnvironmentObject var pushViewData:PushViewData
     @State var draggedRecipeVM:recipeLabelViewModel?
-    let onSelectedRecipe:(Recipe) -> Void
+    //let onSelectedRecipe:(Recipe) -> Void
     @State var editingRecipe = recipeLabelViewModel(recipe: recipeData.recipes[2])
     @State private var editing = false
     @GestureState var tap = false
@@ -34,11 +35,14 @@ struct DayCell: View {
             ScrollView(.vertical){
             VStack(alignment: .leading){
                     ForEach(dayCellVM.recipeLabelViewModels,id: \.id){recipeLabelVM in
-//                        NavigationLink(destination: RecipeDetail(recipe: recipeLabelVM.recipe)){
-                        recipeLabel(recipeLabelVM: recipeLabelVM).onTapGesture {
-                            self.onSelectedRecipe(recipeLabelVM.recipe)
+                     
+                        recipeLabel(recipeLabelVM: recipeLabelVM)
+                            .onTapGesture {
+                                self.pushViewData.selectedRecipe=recipeLabelVM.recipe
+                                self.pushViewData.pushed=true
+
                         }
-                       // }.foregroundColor(Color.black)
+               
                     }
                 }
             .onAppear(perform: dayCellVM.loadDayRecipe)
@@ -74,6 +78,7 @@ struct DayCell: View {
 
 struct DayCell_Previews: PreviewProvider {
     static var previews: some View {
-        DayCell(dayCellVM:DayCellViewModel(date:"20", day: 6),onSelectedRecipe: {_ in})
+        DayCell(dayCellVM:DayCellViewModel(date:"20", day: 6)).environmentObject(PushViewData())
     }
 }
+//,onSelectedRecipe: {_ in}

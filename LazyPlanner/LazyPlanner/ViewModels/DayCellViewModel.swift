@@ -18,16 +18,13 @@ class DayCellViewModel: ObservableObject {
     var day:Int
     private var cancellables = Set<AnyCancellable>()
     init(date:String,day:Int) {
-//        self.recipeLabelViewModels = recipeData.recipes.map{recipe in
-//            recipeLabelViewModel(recipe: recipe)
-//        }
         self.date = date
         self.day = day
     }
     
     
     public func loadDayRecipe(){
-        var day = self.day
+        let day = self.day
         if day < 0 || day > 7 {
             print("load calendar recipe faild. day \(day)")
             return
