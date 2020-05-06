@@ -14,8 +14,6 @@
 		1861BC2B23FA55720015EB7F /* moroccan-stew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1861BC2A23FA55720015EB7F /* moroccan-stew.jpg */; };
 		18AF9C8E2414824C000B4A56 /* Siesta in Frameworks */ = {isa = PBXBuildFile; productRef = 18AF9C8D2414824C000B4A56 /* Siesta */; };
 		18AF9C9224148A0B000B4A56 /* RecipeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF9C9124148A0B000B4A56 /* RecipeAPI.swift */; };
-		18B098F82418AD6D00DD5B76 /* testData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B098F72418AD6D00DD5B76 /* testData.swift */; };
-		18B098FA2418ADC900DD5B76 /* testRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B098F92418ADC900DD5B76 /* testRun.swift */; };
 		18C36FAF244FD0CB00D06FFE /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		18E0AA9324349D5A00990B7B /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 18E0AA9224349D5A00990B7B /* URLImage */; };
 		456510D6DD985864A9AA04D1 /* Pods_LazyPlannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36252594927EA7A9BFD9F65E /* Pods_LazyPlannerTests.framework */; };
@@ -74,8 +72,6 @@
 		1861BC2623FA51580015EB7F /* chicken-noodle-soup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chicken-noodle-soup.jpg"; sourceTree = "<group>"; };
 		1861BC2A23FA55720015EB7F /* moroccan-stew.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "moroccan-stew.jpg"; sourceTree = "<group>"; };
 		18AF9C9124148A0B000B4A56 /* RecipeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAPI.swift; sourceTree = "<group>"; };
-		18B098F72418AD6D00DD5B76 /* testData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testData.swift; sourceTree = "<group>"; };
-		18B098F92418ADC900DD5B76 /* testRun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testRun.swift; sourceTree = "<group>"; };
 		1A7AA1B0EE4477AEF10E7622 /* Pods_LazyPlanner_LazyPlannerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyPlanner_LazyPlannerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36252594927EA7A9BFD9F65E /* Pods_LazyPlannerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyPlannerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5537947D8A6CFD5AB4394480 /* Pods_LazyPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,15 +147,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18AF9C9424148AFF000B4A56 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				18B098F72418AD6D00DD5B76 /* testData.swift */,
-				18B098F92418ADC900DD5B76 /* testRun.swift */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
 		6642053CF5D5095A578E7520 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,7 +218,6 @@
 			children = (
 				FD1BC2A6243A560B00DD9023 /* ViewModels */,
 				18AF9C9124148A0B000B4A56 /* RecipeAPI.swift */,
-				18AF9C9424148AFF000B4A56 /* Controller */,
 				FDFDA79823E728700060C1C4 /* Supporting Views */,
 				FDFDA79723E7284E0060C1C4 /* Models */,
 				FDFDA76723E0AF530060C1C4 /* AppDelegate.swift */,
@@ -585,9 +571,7 @@
 				FDE8A7AE24461F870058B4CE /* WeekViewModel.swift in Sources */,
 				FD1BC2A8243A56AD00DD9023 /* DayCellViewModel.swift in Sources */,
 				FD1BC2A1243458F800DD9023 /* recipeLabel.swift in Sources */,
-				18B098FA2418ADC900DD5B76 /* testRun.swift in Sources */,
 				FDA939DB23EDEDF100A7B565 /* RecipeList.swift in Sources */,
-				18B098F82418AD6D00DD5B76 /* testData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,7 +671,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -745,7 +729,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = "";

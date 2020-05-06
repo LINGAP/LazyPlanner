@@ -21,20 +21,13 @@ class recipeLabelViewModel: ObservableObject, Identifiable {
         self.recipe = recipe
         
         $recipe
-        .map(\.id)
-        .assign(to: \.id, on: self)
-        .store(in: &cancellables)
+            .map(\.id)
+            .assign(to: \.id, on: self)
+            .store(in: &cancellables)
         
         $recipe
             .map(\.title)
             .assign(to: \.title, on: self)
-        .store(in: &cancellables)
-        
-        //TODO: store color
-
-        
-        
-        
-    }
-    
+            .store(in: &cancellables)
+    }    
 }

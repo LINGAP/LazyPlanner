@@ -12,8 +12,6 @@ import Foundation
 
 struct MyCalendar: View {
     @ObservedObject var weekVM = WeekViewModel()
-    
-    @State var draggedRecipeVM:recipeLabelViewModel?
 
     var body: some View {
         VStack{
@@ -23,10 +21,8 @@ struct MyCalendar: View {
                         Text("\(i+1)")
                         DayCell(dayCellVM: self.weekVM.dayCellViewModels[i])
                             .frame(width: CGFloat(50), height: CGFloat(300))
-                            
                     }
                     .border(Color.Theme.grey,width: 1)
-                    
                 }
             }
         }

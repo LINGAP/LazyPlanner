@@ -16,18 +16,20 @@ struct RecipeScroll: View {
     var recipeResource =  recipeAPI.randomRecipes(count:5)
     var body: some View {
         NavigationView{
-            List(randomRecipes, id: \.id){ recipe in
+            List(recipeData.recipes, id: \.id){ recipe in
                 VStack(alignment: .leading) {
                     NavigationLink(destination: RecipeDetail(recipe: recipe)){
                         RecipeThumbnail(recipe: recipe).onTapGesture {
                            self.pushViewData.selectedRecipe=recipe
                            self.pushViewData.pushed=true
-                        }.itemProvider {
-                            return NSItemProvider(object: DragRecipe(recipe:recipe))
+                            }
+                        .itemProvider {
+                            return NSItemProvider(object: DragRecipeData(recipe:recipe))
                         }
                     }
                 }
-            }.onAppear(perform: loadData)
+            }
+            //.onAppear(perform: loadData)
         }
     }
 

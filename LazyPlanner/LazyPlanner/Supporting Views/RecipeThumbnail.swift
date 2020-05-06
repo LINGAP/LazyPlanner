@@ -62,7 +62,7 @@ struct RecipeThumbnail: View {
                     .onChanged{ value in
                         self.dragAmount = CGSize(width: value.translation.width, height: value.translation.height)
                     }
-               .onEnded(<#T##action: (DragGesture.Value) -> Void##(DragGesture.Value) -> Void#>)
+              
             )
 //            .onDrag {
 //                return NSItemProvider(object: DragRecipeData(recipe: self.recipe))

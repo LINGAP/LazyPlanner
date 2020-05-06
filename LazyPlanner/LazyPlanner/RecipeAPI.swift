@@ -18,29 +18,24 @@ class RecipeAPI: Service {
     init() {
         super.init(baseURL: "https://api.spoonacular.com/",standardTransformers: [.text,.image])
 
-        SiestaLog.Category.enabled = .all //print log
-//mutateRequest
+        SiestaLog.Category.enabled = .all //log
         configureTransformer("/recipes/*"){//configure parse
             try self.jsonDecoder.decode(MainRecipeCollection.self, from: $0.content)
-            
         }
     }
     
     func randomRecipes(count: Int) -> Resource {
         return resource("/recipes/random")
             .withParam("number", String(count))
-      //  .withParam("tag",tags )
             .withParam("apiKey", "56cf9661e8104e9089c6fd4bb8f82dad")
     }
     
     func nutritionBreakdown(id:String) -> Resource {
-        return resource("recipes").child(id).child("nutritionWidget.json")
-        .withParam("apiKey", "56cf9661e8104e9089c6fd4bb8f82dad")
+        return resource("recipes")
+            .child(id)
+            .child("nutritionWidget.json")
+            .withParam("apiKey", "56cf9661e8104e9089c6fd4bb8f82dad")
     }
-    
-    
-    
-    
 }
 
 let recipeAPI = RecipeAPI()

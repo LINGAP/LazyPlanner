@@ -12,16 +12,15 @@ import Firebase
 
 class DayCellViewModel: ObservableObject {
     @Published var recipeLabelViewModels = [recipeLabelViewModel]()
-
     @Published var date:String
     var dayAbb:String{return getWeekdayAbbr(day: day)}
     var day:Int
     private var cancellables = Set<AnyCancellable>()
+    
     init(date:String,day:Int) {
         self.date = date
         self.day = day
     }
-    
     
     public func loadDayRecipe(){
         let day = self.day
@@ -29,7 +28,6 @@ class DayCellViewModel: ObservableObject {
             print("load calendar recipe faild. day \(day)")
             return
         }
-        //Test Read Data:
         Firestore.firestore().collection(String(day)).getDocuments(){(querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
