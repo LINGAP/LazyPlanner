@@ -14,12 +14,6 @@ struct RecipeDetail: View {
     var body: some View {
         ScrollView(.vertical){
             VStack{
-//                Image(recipe.image ?? "")
-//                    .resizable()
-//                    .scaledToFill()
-//                    .edgesIgnoringSafeArea(.top)
-                    
-                  //ingredients
                 Text(recipe.title)
                     .font(.caption)
                 
@@ -33,10 +27,7 @@ struct RecipeDetail: View {
    
                         Spacer()
                             Text("\(ingredient.amount ?? 0)")
-                               // .multilineTextAlignment(.trailing)
-                                //.alignmentGuide(.leading) { d in d[.trailing] }
                     }.padding(.horizontal)
-                       
                 }
                 Divider()
                 
@@ -52,7 +43,6 @@ struct RecipeDetail: View {
                         Spacer()
                     }
                 }
-                
             }
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: MyBackButton(label: "Back!") {

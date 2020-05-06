@@ -33,24 +33,7 @@ struct RecipeScroll: View {
     
     
     func loadData()  {
-        
-//           guard let url = URL(string: "https://api.spoonacular.com/recipes/random?number=3&apiKey=56cf9661e8104e9089c6fd4bb8f82dad") else {
-//                    print("invalid URL")
-//                    return
-//                }
-//
-//                let request = URLRequest(url: url)
-//
-//                URLSession.shared.dataTask(with: request) { data, response, error in
-//                    do {
-//                        let decoder = JSONDecoder()
-//                        let decodedResponse = try decoder.decode(MainRecipeCollection.self, from: data!)
-//                        print(decodedResponse)
-//                    }
-//                    catch {
-//                        print("Error: \(error)")
-//                    }
-//        }
+
         recipeResource.addObserver(owner: resourceOwner){
             _,_  in
             let mainRecipeCollection: MainRecipeCollection? = self.recipeResource.latestData?.typedContent()
@@ -89,10 +72,6 @@ struct RecipeScroll: View {
         // The convenience .jsonDict accessor returns empty dict if no
         // data, so the same code can both populate and clear fields.
         _ = resource.jsonDict
-        //nameLabel.text = json["name"] as? String
-        //favoriteColorLabel.text = json["favoriteColor"] as? String
-
-        //errorLabel.text = resource.latestError?.userMessage ?? "unknown error in last request"
     }
 }
 

@@ -2,9 +2,9 @@
 //  DragRecipe.swift
 //  LazyPlanner
 //
-//  Created by vodkachamber on 5/6/20.
+//  Created by Stephanie Le on 5/6/20.
 //  Copyright © 2020 Stephanie Le, Ling Ma. All rights reserved.
-//
+//***********************COPY PASTED FROM TUTORIAL********************
 
 import Foundation
 import SwiftUI
@@ -38,8 +38,6 @@ final class DragRecipe:NSObject,NSItemProviderWriting,NSItemProviderReading,Coda
         }
         return progress
     }
-    
-    
     
     static func object(withItemProviderData data: Data, typeIdentifier: String) throws -> DragRecipe {
         do {

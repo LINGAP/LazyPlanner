@@ -28,6 +28,7 @@ struct RecipeThumbnail: View {
                 .aspectRatio(contentMode: .fill)
                 .clipped()
             })
+             // Price
              .overlay(
                 Group {
                     Circle()
@@ -40,10 +41,8 @@ struct RecipeThumbnail: View {
                 }
                 .position(.init(x: 55, y: 285))
                 .offset(CGSize(width: 0, height: 15))
-
             )
-
-//             Nutrition
+            // Nutrition
             .overlay(
                 Circle()
                     .stroke(Color.white, lineWidth: 7)
@@ -55,43 +54,6 @@ struct RecipeThumbnail: View {
                 .position(.init(x: 275, y: 285))
             )
         }
-        
-        
-//            Image(recipe.image ?? "")
-//                .renderingMode(.original)
-//                .resizable()
-//                .frame(width: imageWidth,height: imageHeight)
-//                .aspectRatio(contentMode: .fill)
-//
-//                //Price
-//                .overlay(
-//                    Group {
-//                        Circle()
-//                        .fill(Color.white)
-//                        .frame(width: imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
-//
-//                        Text(recipe.price?.priceTag.rawValue ?? "-")
-//                        .font(.callout)
-//                       .offset(CGSize(width: 0, height: -28))
-//                    }
-//                    .position(.init(x: (1-tagSizeRatio)*imageWidth, y: (1-tagSizeRatio)*imageHeight))
-//                    .offset(CGSize(width: 0, height: 15))
-//
-//                )
-//
-//                // Nutrition
-//                .overlay(
-//                    Circle()
-//                        .stroke(Color.white, lineWidth: 7)
-//                    .overlay(
-//                        Circle()
-//                            .fill(recipe.nutrients? .color ?? Color.black)
-//                        )
-//                    .frame(width:imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
-//                    .position(.init(x: tagSizeRatio*imageWidth, y: (1-tagSizeRatio)*imageHeight))
-//                )
-
-        
     }
 }
 
