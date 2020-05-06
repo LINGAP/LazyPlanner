@@ -16,6 +16,7 @@
 		18AF9C9224148A0B000B4A56 /* RecipeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF9C9124148A0B000B4A56 /* RecipeAPI.swift */; };
 		18C36FAF244FD0CB00D06FFE /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		18E0AA9324349D5A00990B7B /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 18E0AA9224349D5A00990B7B /* URLImage */; };
+		18ECFF162462812300BBDE7A /* DragRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ECFF152462812300BBDE7A /* DragRecipe.swift */; };
 		456510D6DD985864A9AA04D1 /* Pods_LazyPlannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36252594927EA7A9BFD9F65E /* Pods_LazyPlannerTests.framework */; };
 		B831D9229110E128E40CCB59 /* Pods_LazyPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5537947D8A6CFD5AB4394480 /* Pods_LazyPlanner.framework */; };
 		BF82A8945C28C37ECD687604 /* Pods_LazyPlanner_LazyPlannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7AA1B0EE4477AEF10E7622 /* Pods_LazyPlanner_LazyPlannerUITests.framework */; };
@@ -262,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				FDFDA79D23E735300060C1C4 /* Recipe.swift */,
+				18ECFF152462812300BBDE7A /* DragRecipe.swift */,
 				FDFDA7A523E7D2150060C1C4 /* Data.swift */,
 				FD6EACA92462710A00D51885 /* DragRecipe.swift */,
 			);

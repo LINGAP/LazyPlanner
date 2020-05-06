@@ -27,8 +27,6 @@ struct Recipe: Codable, Identifiable,Hashable {
         return instructions.split(separator: "\n").map(String.init)
     }
     
-    //private var healthScore:Nutrients.Nutrients
-    
     var nutrients: Nutrients?
     //{return healthScore.Nutrients}
     var price:Price?
@@ -105,9 +103,7 @@ private extension Nutrients {
         var visulBreakdown:String{"Nil"}
         
         let healthScore: Double
-        
-        
-        
+
     }
     
 }

@@ -24,7 +24,7 @@ struct RecipeScroll: View {
                            self.pushViewData.pushed=true
                             }
                         .itemProvider {
-                            return NSItemProvider(object: DragRecipeData(recipe:recipe))
+                            return NSItemProvider(object: DragRecipe(recipe:recipe))
                         }
                     }
                 }
@@ -36,7 +36,6 @@ struct RecipeScroll: View {
     
     
     func loadData()  {
-
         recipeResource.addObserver(owner: resourceOwner){
             _,_  in
             let mainRecipeCollection: MainRecipeCollection? = self.recipeResource.latestData?.typedContent()
@@ -47,10 +46,8 @@ struct RecipeScroll: View {
                 print("ERRRR \(self.recipeResource.latestError?.userMessage ?? "unknown error in last request") ")
             }
         }
-
         //Load if Needed
         recipeResource.loadIfNeeded()
-        
     }
     
     func refresh(){
@@ -62,21 +59,18 @@ struct RecipeScroll: View {
         
         //TODO:hide spinner
         if((recipeResource.latestError) != nil){
-          //  resourceChanged(recommendedRecipesResource,event: nil)
         }
         //TODO:show cached data
     }
     
     func resourceChanged(_ resource: Resource, event: ResourceEvent) {
         _ = resource.jsonDict
-
     }
 }
 
 
 struct RecipeScroll_Previews: PreviewProvider {
     static var previews: some View {
-        //"iPhone SE"
         ForEach(["iPhone XS Max"], id: \.self) { deviceName in
             RecipeScroll()
                 .previewDevice(PreviewDevice(rawValue: deviceName))

@@ -19,8 +19,6 @@ struct RecipeThumbnail: View {
 
   
     var body: some View {
-        if #available(iOS 13.4, *) {
-            return AnyView(
             VStack{
                 URLImage(recipe.image,processors: [ Resize(size: CGSize(width: imageWidth, height: imageHeight), scale: UIScreen.main.scale) ],
                          content:  {
@@ -29,55 +27,43 @@ struct RecipeThumbnail: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 50, style: .circular))
                                 .aspectRatio(contentMode: .fill)
                                 .clipped()
-                })
-                    .overlay(
-                        Group {
-                            Circle()
-                                .fill(Color.white)
-                                .frame(width: imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
-                            
-                            Text(recipe.price?.priceTag.rawValue ?? "-")
-                                .font(.callout)
-                                .offset(CGSize(width: 0, height: -28))
-                        }
-                        .position(.init(x: 55, y: 285))
-                        .offset(CGSize(width: 0, height: 15))
-                        
-                )
-                    
-                    //             Nutrition
-                    .overlay(
+                }).overlay(
+                    Group {
                         Circle()
-                            .stroke(Color.white, lineWidth: 7)
-                            .overlay(
-                                Circle()
-                                    .fill(recipe.nutrients? .color ?? Color.black)
-                        )
-                            .frame(width:imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
-                            .position(.init(x: 275, y: 285))
-                )
-            }.offset(dragAmount)
-                .zIndex(self.dragAmount == .zero ? 0 : 1)
-               .gesture(DragGesture()
-                    .onChanged{ value in
-                        self.dragAmount = CGSize(width: value.translation.width, height: value.translation.height)
+                            .fill(Color.white)
+                            .frame(width: imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
+                        
+                        Text(recipe.price?.priceTag.rawValue ?? "-")
+                            .font(.callout)
+                            .offset(CGSize(width: 0, height: -28))
                     }
-              
+                    .position(.init(x: 55, y: 285))
+                    .offset(CGSize(width: 0, height: 15))
+                )
+                //             Nutrition
+                .overlay(
+                    Circle()
+                        .stroke(Color.white, lineWidth: 7)
+                        .overlay(
+                            Circle()
+                                .fill(recipe.nutrients? .color ?? Color.black)
+                        )
+                        .frame(width:imageWidth*tagSizeRatio,height: imageHeight*tagSizeRatio)
+                        .position(.init(x: 275, y: 285))
+                )
+            }
+            .offset(dragAmount)
+            .zIndex(self.dragAmount == .zero ? 0 : 1)
+            .gesture(DragGesture()
+                .onChanged{ value in
+                    self.dragAmount = CGSize(width: value.translation.width, height: value.translation.height)
+                }
             )
-//            .onDrag {
-//                return NSItemProvider(object: DragRecipeData(recipe: self.recipe))
-//            }
-        )}else {
-            // Fallback on earlier versions
-              print("<13.4")
-              return AnyView(self)
-        }
     }
 }
 
 struct RecipeThumbnail_Previews: PreviewProvider {
     static var previews: some View {
-        
         RecipeThumbnail(recipe:recipeData.recipes[2])
     }
 }
