@@ -11,7 +11,6 @@ import Siesta
 
 struct RecipeScroll: View {
     @State var randomRecipes = [Recipe]()
-    @State var selectedRecipe: Recipe?
     let resourceOwner = ResourceOwner()
     @EnvironmentObject var pushViewData:PushViewData
     var recipeResource =  recipeAPI.randomRecipes(count:5)
@@ -23,39 +22,14 @@ struct RecipeScroll: View {
                         RecipeThumbnail(recipe: recipe).onTapGesture {
                            self.pushViewData.selectedRecipe=recipe
                            self.pushViewData.pushed=true
-                        }.onLongPressGesture {
-                            self.selectedRecipe = recipe
-                            print(self.selectedRecipe!.title)
+                        }.itemProvider {
+                            return NSItemProvider(object: DragRecipe(recipe:recipe))
                         }
                     }
                 }
             }.onAppear(perform: loadData)
         }
     }
-
-//        NavigationView{
-//            ScrollView(.vertical){
-//                ForEach(categoryList) { category in
-//                   self.padding(.bottom, 15)
-//
-//                    Text(category.name)
-//                        .font(.headline)
-//                        .foregroundColor(Color.green)
-//                        .frame(width: 200, height: 0 ,alignment: .leading)
-//
-//                    ScrollView(.horizontal) {
-//                        HStack{
-//                            ForEach(category.recipes) { recipe in
-//                                NavigationLink(destination: RecipeDetail(recipe: recipe)){
-//                                    RecipeThumbnail(recipe: recipe)
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }.onAppear(perform: loadData)
-//    }
     
     
     func loadData()  {
@@ -121,6 +95,7 @@ struct RecipeScroll: View {
         //errorLabel.text = resource.latestError?.userMessage ?? "unknown error in last request"
     }
 }
+
 
 struct RecipeScroll_Previews: PreviewProvider {
     static var previews: some View {
