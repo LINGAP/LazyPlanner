@@ -19,11 +19,15 @@ struct RecipeScroll: View {
         NavigationView{
             List(randomRecipes, id: \.id){ recipe in
                 VStack(alignment: .leading) {
-                    RecipeThumbnail(recipe: recipe).onTapGesture {
-                       self.pushViewData.selectedRecipe=recipe
-                       self.pushViewData.pushed=true
+                    NavigationLink(destination: RecipeDetail(recipe: recipe)){
+                        RecipeThumbnail(recipe: recipe).onTapGesture {
+                           self.pushViewData.selectedRecipe=recipe
+                           self.pushViewData.pushed=true
+                        }.onLongPressGesture {
+                            self.selectedRecipe = recipe
+                            print(self.selectedRecipe!.title)
+                        }
                     }
-                  
                 }
             }.onAppear(perform: loadData)
         }
