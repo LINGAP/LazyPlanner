@@ -11,6 +11,7 @@ import Siesta
 
 struct RecipeScroll: View {
     @State var randomRecipes = [Recipe]()
+    @State var selectedRecipe: Recipe?
     let resourceOwner = ResourceOwner()
     var recipeResource =  recipeAPI.randomRecipes(count:5)
     var body: some View {
@@ -18,7 +19,9 @@ struct RecipeScroll: View {
             List(randomRecipes, id: \.id){ recipe in
                 VStack(alignment: .leading) {
                     NavigationLink(destination: RecipeDetail(recipe: recipe)){
-                        RecipeThumbnail(recipe: recipe)
+                        RecipeThumbnail(recipe: recipe).onTapGesture{}.onLongPressGesture{
+                            self.selectedRecipe = recipe
+                        }
                     }
                 }
             }.onAppear(perform: loadData)
