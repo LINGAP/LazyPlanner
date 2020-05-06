@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 import UIKit
 import MobileCoreServices
 
@@ -52,5 +53,4 @@ final class DragRecipeData: NSObject, Codable, NSItemProviderReading, NSItemProv
    
     
 }
-
 

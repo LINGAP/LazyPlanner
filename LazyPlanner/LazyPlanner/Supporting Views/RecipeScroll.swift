@@ -11,7 +11,6 @@ import Siesta
 
 struct RecipeScroll: View {
     @State var randomRecipes = [Recipe]()
-    @State var selectedRecipe: Recipe?
     let resourceOwner = ResourceOwner()
     @EnvironmentObject var pushViewData:PushViewData
     var recipeResource =  recipeAPI.randomRecipes(count:5)
@@ -23,9 +22,8 @@ struct RecipeScroll: View {
                         RecipeThumbnail(recipe: recipe).onTapGesture {
                            self.pushViewData.selectedRecipe=recipe
                            self.pushViewData.pushed=true
-                        }.onLongPressGesture {
-                            self.selectedRecipe = recipe
-                            print(self.selectedRecipe!.title)
+                        }.itemProvider {
+                            return NSItemProvider(object: DragRecipe(recipe:recipe))
                         }
                     }
                 }
@@ -72,6 +70,7 @@ struct RecipeScroll: View {
 
     }
 }
+
 
 struct RecipeScroll_Previews: PreviewProvider {
     static var previews: some View {
