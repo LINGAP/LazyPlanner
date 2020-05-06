@@ -24,7 +24,6 @@ struct HomeMainContent: View {
                 NavigationLink(destination: RecipeDetail(recipe:self.pushViewData.selectedRecipe), isActive: self.$pushViewData.pushed,label: {EmptyView()})
             
             }
-        
         }
     }
 }
